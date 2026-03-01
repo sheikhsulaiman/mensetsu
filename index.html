@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面接準備 | Mensetsu Prep — Japanese Language School Interview Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+Bengali:wght@300;400;600;700&family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0b;
+    --paper: #faf8f3;
+    --cream: #f2ede3;
+    --red: #c8392b;
+    --red-light: #e8564a;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --blue: #2c5f8a;
+    --blue-light: #4a8fc4;
+    --muted: #6b6560;
+    --border: #ddd8ce;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(15,14,11,0.08);
+    --shadow-lg: 0 12px 48px rgba(15,14,11,0.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Syne', 'Noto Sans Bengali', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--red);
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .logo-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+
+  .logo-en {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .header-badge {
+    background: var(--red);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '面接';
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,57,43,0.2);
+    border: 1px solid var(--red);
+    color: var(--red-light);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--paper);
+  }
+
+  .hero h1 span {
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(250,248,243,0.65);
+    line-height: 1.6;
+    max-width: 560px;
+    margin-bottom: 36px;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-weight: 300;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  /* SEARCH & FILTER */
+  .controls-section {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+    position: sticky;
+    top: 63px;
+    z-index: 90;
+  }
+
+  .controls-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    background: white;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-box input:focus { border-color: var(--red); }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    background: white;
+    color: var(--muted);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .filter-tab:hover { border-color: var(--red); color: var(--red); }
+  .filter-tab.active { background: var(--red); border-color: var(--red); color: white; }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 60px;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .section-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+
+  .section-icon.red { background: rgba(200,57,43,0.1); }
+  .section-icon.gold { background: rgba(201,168,76,0.15); }
+  .section-icon.blue { background: rgba(44,95,138,0.1); }
+
+  .section-title-block { flex: 1; }
+
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .section-title-bn {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .section-count {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* QUESTION CARDS */
+  .questions-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .q-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    cursor: pointer;
+  }
+
+  .q-card:hover {
+    border-color: var(--red);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .q-card.open .q-answer { display: block; }
+  .q-card.open .chevron { transform: rotate(180deg); }
+
+  .q-header {
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .q-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted);
+    background: var(--cream);
+    padding: 4px 10px;
+    border-radius: 4px;
+    line-height: 1.2;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .q-content { display: flex; flex-direction: column; gap: 4px; }
+
+  .q-japanese {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .q-romaji {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--blue);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .q-bengali {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .chevron {
+    color: var(--muted);
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+
+  .q-answer {
+    display: none;
+    border-top: 1px solid var(--border);
+    background: linear-gradient(to bottom, var(--cream), white);
+  }
+
+  .q-answer-inner {
+    padding: 20px 20px 20px 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .answer-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .answer-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    width: fit-content;
+  }
+
+  .answer-label.jp { background: rgba(200,57,43,0.1); color: var(--red); }
+  .answer-label.rm { background: rgba(44,95,138,0.1); color: var(--blue); }
+  .answer-label.bn { background: rgba(201,168,76,0.15); color: #8a6a1c; }
+
+  .answer-text-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.8;
+  }
+
+  .answer-text-rm {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--blue);
+    line-height: 1.7;
+  }
+
+  .answer-text-bn {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .copy-btn {
+    align-self: flex-start;
+    margin-top: 6px;
+    padding: 7px 16px;
+    background: transparent;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .copy-btn:hover { border-color: var(--red); color: var(--red); }
+  .copy-btn.copied { background: var(--red); border-color: var(--red); color: white; }
+
+  /* JIKOSHOKAI TEMPLATE */
+  .template-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 24px;
+  }
+
+  .template-header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .template-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .template-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .template-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px;
+    background: var(--cream);
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .tl-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .tl-bn {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* EMBASSY SECTION SPECIAL */
+  .embassy-card {
+    border-left: 4px solid var(--blue);
+  }
+
+  .embassy-card .q-num { background: rgba(44,95,138,0.1); color: var(--blue); }
+
+  /* PROGRESS TRACKER */
+  .progress-bar-section {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .progress-text { flex: 1; min-width: 160px; }
+  .progress-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+  .progress-text p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+
+  .progress-bar-wrap { flex: 2; min-width: 200px; }
+  .progress-bar-bg {
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    border-radius: 100px;
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+  .progress-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .progress-actions { display: flex; gap: 10px; }
+  .btn-small {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    background: transparent;
+    color: var(--paper);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+  .btn-small:hover { background: rgba(255,255,255,0.1); }
+  .btn-small.primary { background: var(--red); border-color: var(--red); }
+  .btn-small.primary:hover { background: var(--red-light); }
+
+  /* TIPS BOX */
+  .tip-box {
+    background: rgba(201,168,76,0.08);
+    border: 1.5px solid var(--gold);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .tip-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+  .tip-content h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #8a6a1c;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+  .tip-content p {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: var(--muted);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    border-top: 3px solid var(--red);
+  }
+  footer span { color: var(--gold-light); }
+
+  /* NO RESULTS */
+  .no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    display: none;
+  }
+  .no-results h3 { font-size: 1.2rem; margin-bottom: 8px; }
+  .no-results p { font-size: 0.85rem; font-family: 'Noto Sans Bengali', sans-serif; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .template-line { grid-template-columns: 1fr; }
+    .q-header { grid-template-columns: auto 1fr auto; }
+    .hero-stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-jp">面接準備</span>
+      <span class="logo-en">Mensetsu Prep</span>
+    </div>
+    <div class="header-badge">JLPT N4 Ready</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">🎌 ভাষা বিদ্যালয় সাক্ষাৎকার প্রস্তুতি</div>
+    <h1>面接・自己紹介<br><span>সম্পূর্ণ গাইড</span></h1>
+    <p class="hero-subtitle">জাপানি ভাষা বিদ্যালয়, দূতাবাস এবং চাকরির সাক্ষাৎকারের জন্য সম্পূর্ণ প্রশ্ন ও উত্তর সংগ্রহ। জাপানি · রোমাজি · বাংলা।</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" id="totalQ">120+</span>
+        <span class="stat-label">প্রশ্ন</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label">বিভাগ</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">ভাষা</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="controls-section">
+  <div class="controls-inner">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="প্রশ্ন খুঁজুন... (বাংলা, Japanese, or romaji)">
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">সব</button>
+      <button class="filter-tab" data-filter="jikoshokai">自己紹介</button>
+      <button class="filter-tab" data-filter="mensetsu">面接 (সাধারণ)</button>
+      <button class="filter-tab" data-filter="school">ভাষা বিদ্যালয়</button>
+      <button class="filter-tab" data-filter="embassy">দূতাবাস</button>
+      <button class="filter-tab" data-filter="pm">খাদ্য প্রক্রিয়াকরণ</button>
+      <button class="filter-tab" data-filter="kaigo">介護</button>
+    </div>
+  </div>
+</div>
+
+<main class="main" id="mainContent">
+
+  <!-- PROGRESS TRACKER -->
+  <div class="progress-bar-section">
+    <div class="progress-text">
+      <h3>অনুশীলন অগ্রগতি</h3>
+      <p>কতটি প্রশ্ন দেখেছেন তার হিসাব</p>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">0 টি প্রশ্ন দেখা হয়েছে</div>
+    </div>
+    <div class="progress-actions">
+      <button class="btn-small" onclick="resetProgress()">রিসেট</button>
+      <button class="btn-small primary" onclick="expandAll()">সব খুলুন</button>
+    </div>
+  </div>
+
+  <!-- ========== JIKOSHOKAI ========== -->
+  <section class="section" data-section="jikoshokai">
+    <div class="section-header">
+      <div class="section-icon gold">🪷</div>
+      <div class="section-title-block">
+        <div class="section-title">自己紹介 — Jikoshokai</div>
+        <div class="section-title-bn">আত্মপরিচয় টেমপ্লেট</div>
+      </div>
+      <span class="section-count">Template</span>
+    </div>
+
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <div class="tip-content">
+        <h4>IMPORTANT TIP — গুরুত্বপূর্ণ পরামর্শ</h4>
+        <p>জিকোশোকাই অনুশীলন করার সময় প্রতিটি বন্ধনীর জায়গায় নিজের তথ্য বসান। শুরু ও শেষে অবশ্যই মাথা নত করুন (おじぎ)। ২–৩ মিনিটের মধ্যে শেষ করুন।</p>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <div class="template-header">
+        <span class="template-title">🎌 完全な自己紹介スクリプト</span>
+        <button class="btn-small" onclick="copyTemplate()">📋 কপি করুন</button>
+      </div>
+      <div class="template-body" id="templateBody">
+        <div class="template-line">
+          <div class="tl-jp">しつれいいたします。<br>しゃちょうさま、おはようございます。<span style="color:var(--red)">(おじぎ)</span></div>
+          <div class="tl-bn">ক্ষমা করবেন। সভাপতি মহাশয়, শুভ সকাল। (মাথা নত)</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">ほんじつはおじかんをいただきまことにありがとうございます。<span style="color:var(--red)">(おじぎ)</span></div>
+          <div class="tl-bn">আজকে সময় দেওয়ার জন্য অনেক ধন্যবাদ। (মাথা নত)</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">こちらのめんせつにさんかするできたことに、ほんとうにかんしゃしております。</div>
+          <div class="tl-bn">এই সাক্ষাৎকারে অংশ নিতে পেরে সত্যিই কৃতজ্ঞ।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">はじめまして。<span style="color:var(--red)">(おじぎ)</span><br>わたしのなまえは【আপনার নাম】ともうします。<br>【ডাকনাম】とよばれています。</div>
+          <div class="tl-bn">প্রথম দেখা। আমার নাম [নাম]। [ডাকনাম] বলে ডাকা হয়।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">せいねんがっぴは【জন্ম তারিখ】にうまれました。<br>ねんれいは【বয়স】さいです。</div>
+          <div class="tl-bn">আমি [তারিখ] জন্মগ্রহণ করেছি। বয়স [বছর] বছর।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">インドネシア / バングラデシュ の【এলাকা】からまいりました。</div>
+          <div class="tl-bn">ইন্দোনেশিয়া / বাংলাদেশের [এলাকা] থেকে এসেছি।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのしゅみは【শখ】をすることです。<br>いっしゅうかんに【কতবার】かいしています。</div>
+          <div class="tl-bn">আমার শখ হলো [শখ]। সপ্তাহে [কতবার] বার করি।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのかぞくは【সংখ্যা】にんいます。<br>【পরিবারের সদস্য】と【...】とわたしです。</div>
+          <div class="tl-bn">আমার পরিবারে [সংখ্যা] জন আছেন।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのしんちょうは【উচ্চতা】センチメトルです。<br>たいじゅうは【ওজন】キログラムです。</div>
+          <div class="tl-bn">আমার উচ্চতা [সেমি] সেন্টিমিটার। ওজন [কেজি] কিলোগ্রাম।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのちょうしょはチームとしごとできて、じかんがまもれて、<br>つねにがんばって、あかるいひとです。</div>
+          <div class="tl-bn">আমার গুণ: দলগত কাজ, সময় মানা, সর্বদা পরিশ্রম করা, প্রাণবন্ত।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのたんしょはすこしむだづかいです。<br>むだづかいしないようになるべくまいつきちょうきんします。</div>
+          <div class="tl-bn">আমার দুর্বলতা: একটু বেশি খরচ করি। তাই প্রতি মাস সঞ্চয় করার চেষ্টা করি।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">わたしのもくてきは、にほんではたらきたいんです。<br>おかねをためたいんです。かぞくのけいざいをたすけるようにしております。</div>
+          <div class="tl-bn">আমার লক্ষ্য: জাপানে কাজ করা, অর্থ সঞ্চয়, পরিবারকে সাহায্য করা।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">にほんにかえってから、いつかじぶんで【ব্যবসার নাম】をひらきたいです。<br>じぶんでうちをたてたいです。</div>
+          <div class="tl-bn">জাপান থেকে ফেরার পর নিজের [ব্যবসা] খুলতে চাই। নিজের বাড়ি বানাতে চাই।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">どんなにむずかしくてもあきらめません。いくらたいへんでも、<br>どこでも、つねにがんばります。</div>
+          <div class="tl-bn">যতই কঠিন হোক, হার মানব না। সর্বদা পরিশ্রম করব।</div>
+        </div>
+        <div class="template-line">
+          <div class="tl-jp">すみませんがしゃちょうさま、<br>こちらのしごとはわたしにやらせてください。<span style="color:var(--red)">(おじぎ)</span><br>どうぞよろしくおねがいいたします。<span style="color:var(--red)">(おじぎ)</span></div>
+          <div class="tl-bn">মাফ করবেন, এই কাজটি আমাকে করতে দিন। (মাথা নত)<br>যত্ন করবেন, ধন্যবাদ। (মাথা নত)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GENERAL MENSETSU ========== -->
+  <section class="section" data-section="mensetsu">
+    <div class="section-header">
+      <div class="section-icon red">💬</div>
+      <div class="section-title-block">
+        <div class="section-title">面接 — সাধারণ সাক্ষাৎকার প্রশ্ন</div>
+        <div class="section-title-bn">সব ধরনের সাক্ষাৎকারে জিজ্ঞেস করা হয়</div>
+      </div>
+      <span class="section-count" id="cnt-mensetsu">30 Q</span>
+    </div>
+    <div class="questions-grid" id="grid-mensetsu"></div>
+  </section>
+
+  <!-- ========== LANGUAGE SCHOOL ========== -->
+  <section class="section" data-section="school">
+    <div class="section-header">
+      <div class="section-icon gold">🏫</div>
+      <div class="section-title-block">
+        <div class="section-title">語学学校面接 — ভাষা বিদ্যালয় সাক্ষাৎকার</div>
+        <div class="section-title-bn">জাপানি ভাষা বিদ্যালয়ের জন্য বিশেষ প্রশ্ন</div>
+      </div>
+      <span class="section-count" id="cnt-school">20 Q</span>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">🌸</span>
+      <div class="tip-content">
+        <h4>JLPT N4 পরীক্ষার্থীদের জন্য</h4>
+        <p>আপনি ইতিমধ্যে JLPT N4 পাস করেছেন — এটি সাক্ষাৎকারে উল্লেখ করুন: "JLPT N4 শিকেন ni goukaku shimashita!" এটি আপনার আবেদনকে শক্তিশালী করবে।</p>
+      </div>
+    </div>
+    <div class="questions-grid" id="grid-school"></div>
+  </section>
+
+  <!-- ========== EMBASSY ========== -->
+  <section class="section" data-section="embassy">
+    <div class="section-header">
+      <div class="section-icon blue">🏛️</div>
+      <div class="section-title-block">
+        <div class="section-title">大使館面接 — দূতাবাস সাক্ষাৎকার</div>
+        <div class="section-title-bn">ভিসা সাক্ষাৎকারের জন্য গুরুত্বপূর্ণ প্রশ্ন</div>
+      </div>
+      <span class="section-count" id="cnt-embassy">20 Q</span>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">⚠️</span>
+      <div class="tip-content">
+        <h4>দূতাবাস সাক্ষাৎকার টিপস</h4>
+        <p>সৎ ও সংক্ষিপ্ত উত্তর দিন। পরিষ্কার কারণ বলুন কেন জাপানে যেতে চান। অর্থায়নের তথ্য সঠিক রাখুন। ফেরার পরিকল্পনা স্পষ্টভাবে বলুন।</p>
+      </div>
+    </div>
+    <div class="questions-grid" id="grid-embassy"></div>
+  </section>
+
+  <!-- ========== FOOD PROCESSING ========== -->
+  <section class="section" data-section="pm">
+    <div class="section-header">
+      <div class="section-icon gold">🍱</div>
+      <div class="section-title-block">
+        <div class="section-title">飲食料品製造 — খাদ্য প্রক্রিয়াকরণ</div>
+        <div class="section-title-bn">খাদ্য শিল্পে কর্মসংস্থানের জন্য বিশেষ প্রশ্ন</div>
+      </div>
+      <span class="section-count" id="cnt-pm">25 Q</span>
+    </div>
+    <div class="questions-grid" id="grid-pm"></div>
+  </section>
+
+  <!-- ========== KAIGO ========== -->
+  <section class="section" data-section="kaigo">
+    <div class="section-header">
+      <div class="section-icon red">🏥</div>
+      <div class="section-title-block">
+        <div class="section-title">介護 — সেবা পরিচর্যা</div>
+        <div class="section-title-bn">বৃদ্ধ পরিচর্যা বিভাগের প্রশ্ন</div>
+      </div>
+      <span class="section-count" id="cnt-kaigo">15 Q</span>
+    </div>
+    <div class="questions-grid" id="grid-kaigo"></div>
+  </section>
+
+  <div class="no-results" id="noResults">
+    <h3>🔍 কোনো ফলাফল নেই</h3>
+    <p>অন্য শব্দ দিয়ে আবার চেষ্টা করুন।</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>面接準備ガイド | <span>JLPT N4</span> 合格おめでとうございます 🎉 | সাফল্য কামনা করি</p>
+</footer>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+
+const data = {
+  mensetsu: [
+    {
+      jp: "自己紹介をお願いします。",
+      romaji: "Jikoshokai o onegaishimasu.",
+      bn: "আপনার পরিচয় দিন।",
+      ans_jp: "はじめまして。わたしの名前は【名前】ともうします。インドネシア / バングラデシュから来ました。趣味は【趣味】です。どうぞよろしくお願いします。",
+      ans_rm: "Hajimemashite. Watashi no namae wa [namae] to moushimasu. Indonesia/Bangladesh kara kimashita. Shumi wa [shumi] desu. Douzo yoroshiku onegaishimasu.",
+      ans_bn: "প্রথম দেখা। আমার নাম [নাম]। ইন্দোনেশিয়া/বাংলাদেশ থেকে এসেছি। আমার শখ [শখ]। ভালো থাকুন।"
+    },
+    {
+      jp: "あなたの長所と短所を教えてください。",
+      romaji: "Anata no chousho to tansho o oshiete kudasai.",
+      bn: "আপনার গুণ ও দোষ বলুন।",
+      ans_jp: "私の長所は真面目で責任感が強く、チームワークができることです。短所は少し恥ずかしがり屋ですが、克服するために努力しています。",
+      ans_rm: "Watashi no chousho wa majime de sekininkan ga tsuyoku, chiimuwaaku ga dekiru koto desu. Tansho wa sukoshi hazukashigariya desu ga, kokufuku suru tame ni doryoku shite imasu.",
+      ans_bn: "আমার গুণ হলো আমি পরিশ্রমী, দায়িত্ববোধ আছে এবং দলগত কাজ করতে পারি। দোষ হলো একটু লাজুক, তবে কাটিয়ে উঠতে চেষ্টা করছি।"
+    },
+    {
+      jp: "どうして日本に行きたいですか。",
+      romaji: "Doushite Nihon ni ikitai desu ka?",
+      bn: "কেন জাপানে যেতে চান?",
+      ans_jp: "日本の高い技術と文化を学びたいです。そして、家族の生活を支えるために、お金を貯めたいです。",
+      ans_rm: "Nihon no takai gijutsu to bunka o manabitai desu. Soshite, kazoku no seikatsu o sasaeru tame ni, okane o tametai desu.",
+      ans_bn: "আমি জাপানের উন্নত প্রযুক্তি ও সংস্কৃতি শিখতে চাই। এবং পরিবারের জীবনযাত্রা সাহায্য করতে অর্থ সঞ্চয় করতে চাই।"
+    },
+    {
+      jp: "日本語はどれぐらい勉強しましたか。",
+      romaji: "Nihongo wa dorekurai benkyou shimashita ka?",
+      bn: "কতদিন ধরে জাপানি ভাষা পড়েছেন?",
+      ans_jp: "約【X】ヶ月間、日本語を勉強しました。JLPT N4に合格しました。まだまだ勉強を続けています。",
+      ans_rm: "Yaku [X] kagetsu kan, Nihongo o benkyou shimashita. JLPT N4 ni goukaku shimashita. Madamada benkyou o tsuzukete imasu.",
+      ans_bn: "প্রায় [X] মাস ধরে জাপানি ভাষা পড়েছি। JLPT N4 পরীক্ষায় পাস করেছি। এখনো পড়াশোনা চালিয়ে যাচ্ছি।"
+    },
+    {
+      jp: "将来の夢は何ですか。",
+      romaji: "Shourai no yume wa nan desu ka?",
+      bn: "আপনার ভবিষ্যৎ স্বপ্ন কী?",
+      ans_jp: "日本で仕事をして経験を積んで、帰国後に自分でビジネスを開きたいです。そして、家族を幸せにしたいです。",
+      ans_rm: "Nihon de shigoto o shite keiken o tsunde, kikoku go ni jibun de bijinesu o hirakitai desu. Soshite, kazoku o shiawase ni shitai desu.",
+      ans_bn: "জাপানে কাজ করে অভিজ্ঞতা সঞ্চয় করে, দেশে ফিরে নিজের ব্যবসা খুলতে চাই। এবং পরিবারকে সুখী করতে চাই।"
+    },
+    {
+      jp: "インドネシアに帰ってから何をしたいですか。",
+      romaji: "Indonesia ni kaette kara nani o shitai desu ka?",
+      bn: "ইন্দোনেশিয়া/বাংলাদেশে ফিরে কী করবেন?",
+      ans_jp: "日本で習ったことを活かして、自分でレストランや会社を開きたいです。",
+      ans_rm: "Nihon de naratta koto o ikashite, jibun de resutoran ya kaisha o hirakitai desu.",
+      ans_bn: "জাপানে শেখা জ্ঞান কাজে লাগিয়ে নিজের রেস্টুরেন্ট বা প্রতিষ্ঠান খুলতে চাই।"
+    },
+    {
+      jp: "ご家族は何人いますか。",
+      romaji: "Go kazoku wa nan nin imasu ka?",
+      bn: "আপনার পরিবারে কতজন আছেন?",
+      ans_jp: "私の家族は【X】人います。父と母と【兄弟姉妹】と私です。",
+      ans_rm: "Watashi no kazoku wa [X] nin imasu. Chichi to haha to [kyoudai shimai] to watashi desu.",
+      ans_bn: "আমার পরিবারে [X] জন আছেন। বাবা, মা, [ভাই-বোন] এবং আমি।"
+    },
+    {
+      jp: "趣味は何ですか。",
+      romaji: "Shumi wa nan desu ka?",
+      bn: "আপনার শখ কী?",
+      ans_jp: "私の趣味は【趣味】をすることです。週に【X】回しています。体が健康になって、病気になりにくいです。",
+      ans_rm: "Watashi no shumi wa [shumi] o suru koto desu. Shuu ni [X] kai shite imasu. Karada ga genki ni natte, byouki ni narinikui desu.",
+      ans_bn: "আমার শখ হলো [শখ]। সপ্তাহে [X] বার করি। শরীর সুস্থ থাকে, অসুখ কম হয়।"
+    },
+    {
+      jp: "どのくらい日本で働きたいですか。",
+      romaji: "Donogurai Nihon de hatarakitai desu ka?",
+      bn: "কতদিন জাপানে কাজ করতে চান?",
+      ans_jp: "【X】年間ぐらい働きたいです。でも、機会があれば、もっと長く働きたいです。",
+      ans_rm: "[X] nenkan gurai hatarakitai desu. Demo, kikai ga areba, motto nagaku hatarakitai desu.",
+      ans_bn: "প্রায় [X] বছর কাজ করতে চাই। তবে সুযোগ পেলে আরো বেশি দিন থাকতে চাই।"
+    },
+    {
+      jp: "体力に自信がありますか。",
+      romaji: "Tairyoku ni jishin ga arimasu ka?",
+      bn: "শারীরিক সক্ষমতায় আত্মবিশ্বাস আছে?",
+      ans_jp: "はい、体力に自信があります。毎朝約1時間運動しています。例えば、腕立て伏せや走ります。ですから、体が元気になって病気になりにくいです。",
+      ans_rm: "Hai, tairyoku ni jishin ga arimasu. Maiasa yaku ichi jikan undou shite imasu. Tatoeba, udatedase ya hashirimasu. Desukara, karada ga genki ni natte byouki ni narinikui desu.",
+      ans_bn: "হ্যাঁ, শারীরিক সক্ষমতায় আত্মবিশ্বাস আছে। প্রতিদিন সকালে প্রায় ১ ঘন্টা ব্যায়াম করি। যেমন: পুশ-আপ, দৌড়ানো। তাই শরীর সুস্থ থাকে।"
+    },
+    {
+      jp: "日本語で一番難しいことは何ですか。",
+      romaji: "Nihongo de ichiban muzukashii koto wa nan desu ka?",
+      bn: "জাপানি ভাষায় সবচেয়ে কঠিন কী?",
+      ans_jp: "日本語で一番難しいのは漢字です。書き方と読み方がたくさんありますが、毎日練習して覚えようとしています。",
+      ans_rm: "Nihongo de ichiban muzukashii no wa kanji desu. Kakikata to yomikata ga takusan arimasu ga, mainichi renshuu shite oboeyou to shite imasu.",
+      ans_bn: "জাপানি ভাষায় সবচেয়ে কঠিন হলো কাঞ্জি। লেখার ও পড়ার অনেক নিয়ম আছে, তবে প্রতিদিন অনুশীলন করে মুখস্থ করার চেষ্টা করছি।"
+    },
+    {
+      jp: "毎月どれくらい貯金したいですか。",
+      romaji: "Maitsuki dorekurai chokin shitai desu ka?",
+      bn: "প্রতি মাস কত টাকা সঞ্চয় করতে চান?",
+      ans_jp: "毎月約【X】万円ぐらい貯金したいです。3年間で約【X】百万円貯めたいと思います。",
+      ans_rm: "Maitsuki yaku [X] man en gurai chokin shitai desu. San nenkan de yaku [X] hyaku man en tametai to omoimasu.",
+      ans_bn: "প্রতি মাস প্রায় [X] মান ইয়েন সঞ্চয় করতে চাই। ৩ বছরে প্রায় [X] শত মান ইয়েন জমাতে চাই।"
+    },
+    {
+      jp: "ストレスを感じたとき、どうしますか。",
+      romaji: "Sutoresu o kanjita toki, dou shimasu ka?",
+      bn: "মানসিক চাপ অনুভব করলে কী করেন?",
+      ans_jp: "ストレスを感じたとき、運動したり、音楽を聴いたり、友達と話したりします。喜んでやれば、すべてのことは簡単になると思います。",
+      ans_rm: "Sutoresu o kanjita toki, undou shitari, ongaku o kiitari, tomodachi to hanashitari shimasu. Yorokonde yareba, subete no koto wa kantan ni naru to omoimasu.",
+      ans_bn: "মানসিক চাপ হলে ব্যায়াম করি, গান শুনি বা বন্ধুর সাথে কথা বলি। মনে করি আনন্দ নিয়ে করলে সব কাজ সহজ হয়।"
+    },
+    {
+      jp: "友達と問題があったら、どうしますか。",
+      romaji: "Tomodachi to mondai ga attara, dou shimasu ka?",
+      bn: "বন্ধুর সাথে সমস্যা হলে কী করবেন?",
+      ans_jp: "友達と問題があったら、すぐに話し合いをして、解決しようとします。もし解決できなければ、上司に助けを求めます。",
+      ans_rm: "Tomodachi to mondai ga attara, sugu ni hanashiai o shite, kaiketsu shiyou to shimasu. Moshi kaiketsu dekinakereba, joushi ni tasuke o motomemasu.",
+      ans_bn: "বন্ধুর সাথে সমস্যা হলে সাথে সাথে আলোচনা করে সমাধান করার চেষ্টা করব। যদি সমাধান না হয় তবে উর্ধ্বতন কর্তৃপক্ষের সাহায্য নেব।"
+    },
+    {
+      jp: "あなたはどんな人ですか。",
+      romaji: "Anata wa donna hito desu ka?",
+      bn: "আপনি কেমন মানুষ?",
+      ans_jp: "私は正直で責任感が強い人です。そして、いつも一生懸命に仕事をする人です。",
+      ans_rm: "Watashi wa shoujiki de sekininkan ga tsuyoi hito desu. Soshite, itsumo isshoukenmei ni shigoto o suru hito desu.",
+      ans_bn: "আমি সৎ এবং দায়িত্বশীল মানুষ। এবং সর্বদা মনোযোগ দিয়ে কাজ করি।"
+    },
+    {
+      jp: "何時間くらい仕事ができますか。",
+      romaji: "Nan jikan gurai shigoto ga dekimasu ka?",
+      bn: "কত ঘন্টা কাজ করতে পারবেন?",
+      ans_jp: "私は12時間ぐらい仕事ができます。なぜなら、私の体はまだ強いし元気だと思います。",
+      ans_rm: "Watashi wa juuni jikan gurai shigoto ga dekimasu. Nazenara, watashi no karada wa mada tsuyoi shi genki da to omoimasu.",
+      ans_bn: "প্রায় ১২ ঘন্টা কাজ করতে পারব। কারণ আমার শরীর এখনো সুস্থ ও শক্তিশালী।"
+    },
+    {
+      jp: "日本に知り合いがいますか。",
+      romaji: "Nihon ni shiriai ga imasu ka?",
+      bn: "জাপানে পরিচিত কেউ আছেন?",
+      ans_jp: "いいえ、日本には知り合いがいません。でも、一人でも大丈夫です。新しい友達を作りたいと思います。",
+      ans_rm: "Iie, Nihon ni wa shiriai ga imasen. Demo, hitori demo daijoubu desu. Atarashii tomodachi o tsukuritai to omoimasu.",
+      ans_bn: "না, জাপানে কোনো পরিচিত নেই। তবে একা থাকতে কোনো সমস্যা নেই। নতুন বন্ধু বানাতে চাই।"
+    },
+    {
+      jp: "日本に行ったら、どこに旅行したいですか。",
+      romaji: "Nihon ni ittara, doko ni ryokou shitai desu ka?",
+      bn: "জাপানে গেলে কোথায় যেতে চান?",
+      ans_jp: "日本に行ったら、富士山に登りたいです。そして、東京タワーや浅草寺なども見てみたいです。",
+      ans_rm: "Nihon ni ittara, Fujisan ni noboritai desu. Soshite, Toukyou Tawaa ya Sensouji nado mo mite mitai desu.",
+      ans_bn: "জাপানে গেলে ফুজি পাহাড়ে উঠতে চাই। এবং টোকিও টাওয়ার, সেনসোজি মন্দিরও দেখতে চাই।"
+    },
+    {
+      jp: "今まで一番大変だったことを教えてください。",
+      romaji: "Ima made ichiban taihen datta koto o oshiete kudasai.",
+      bn: "এ পর্যন্ত সবচেয়ে কঠিন অভিজ্ঞতা কী?",
+      ans_jp: "一番大変だったことは、大切な人を失ったときと、家族を幸せにできなかったときです。",
+      ans_rm: "Ichiban taihen datta koto wa, taisetsu na hito o ushinatta toki to, kazoku o shiawase ni dekinakatta toki desu.",
+      ans_bn: "সবচেয়ে কঠিন সময় ছিল প্রিয়জন হারানোর সময় এবং পরিবারকে সুখী করতে না পারার সময়।"
+    },
+    {
+      jp: "仕事でミスをしたとき、どうしますか。",
+      romaji: "Shigoto de misu o shita toki, dou shimasu ka?",
+      bn: "কাজে ভুল করলে কী করবেন?",
+      ans_jp: "まず謝って、上司に報告します。そして、同じミスをしないように、もっと気をつけて、いつもミスから学びます。",
+      ans_rm: "Mazu ayamatte, joushi ni houkoku shimasu. Soshite, onaji misu o shinai you ni, motto ki o tsukete, itsumo misu kara manabimasu.",
+      ans_bn: "প্রথমে মাফ চাই, তারপর উর্ধ্বতনকে জানাই। এবং একই ভুল না করতে আরো সতর্ক থাকি, সবসময় ভুল থেকে শিখি।"
+    },
+    {
+      jp: "集団生活をしたことがありますか。",
+      romaji: "Shuudan seikatsu o shita koto ga arimasu ka?",
+      bn: "দলবদ্ধ জীবনযাপনের অভিজ্ঞতা আছে?",
+      ans_jp: "はい、あります。仕事のとき、集団生活をしたことがあります。日本に行ったら、びっくりしません。",
+      ans_rm: "Hai, arimasu. Shigoto no toki, shuudan seikatsu o shita koto ga arimasu. Nihon ni ittara, bikkuri shimasen.",
+      ans_bn: "হ্যাঁ, আছে। কাজের সময় দলবদ্ধভাবে জীবনযাপন করেছি। জাপানে গেলে অবাক হব না।"
+    },
+    {
+      jp: "お祈りと断食はどうしますか。",
+      romaji: "Oinori to danjiki wa dou shimasu ka?",
+      bn: "নামাজ ও রোজা কীভাবে পালন করবেন?",
+      ans_jp: "会社にお祈りの場所がなかったら、アパートでお祈りできます。断食については、会社からダメだというとやりません。私はいつも会社の指示に従わなければなりません。",
+      ans_rm: "Kaisha ni oinori no basho ga nakattara, apaato de oinori dekimasu. Danjiki ni tsuite wa, kaisha kara dame da to iu to yarimasen. Watashi wa itsumo kaisha no shiji ni shitagawanakereba narimasen.",
+      ans_bn: "প্রতিষ্ঠানে নামাজের জায়গা না থাকলে অ্যাপার্টমেন্টে নামাজ পড়তে পারব। রোজার বিষয়ে কোম্পানি নিষেধ করলে করব না। সবসময় কোম্পানির নির্দেশ মানতে হবে।"
+    },
+    {
+      jp: "自転車に乗れますか。",
+      romaji: "Jitensha ni noremasu ka?",
+      bn: "সাইকেল চালাতে পারেন?",
+      ans_jp: "はい、乗れます。",
+      ans_rm: "Hai, noremasu.",
+      ans_bn: "হ্যাঁ, পারি।"
+    },
+    {
+      jp: "夜勤（やきん）は大丈夫ですか。",
+      romaji: "Yakin wa daijoubu desu ka?",
+      bn: "রাতের শিফটে কাজ করতে পারবেন?",
+      ans_jp: "はい、夜勤でも大丈夫です。",
+      ans_rm: "Hai, yakin demo daijoubu desu.",
+      ans_bn: "হ্যাঁ, রাতের শিফটেও কাজ করতে পারব।"
+    },
+    {
+      jp: "毎月、ご両親にいくら送りたいですか。",
+      romaji: "Maitsuki, go ryoushin ni ikura okuritai desu ka?",
+      bn: "প্রতি মাস বাবা-মাকে কত টাকা পাঠাবেন?",
+      ans_jp: "毎月約【X】万円ぐらい両親に送りたいです。",
+      ans_rm: "Maitsuki yaku [X] man en gurai ryoushin ni okuritai desu.",
+      ans_bn: "প্রতি মাস প্রায় [X] মান ইয়েন বাবা-মাকে পাঠাতে চাই।"
+    },
+    {
+      jp: "あなたにとって一番大切なことは何ですか。",
+      romaji: "Anata ni totte ichiban taisetsu na koto wa nan desu ka?",
+      bn: "আপনার কাছে সবচেয়ে গুরুত্বপূর্ণ কী?",
+      ans_jp: "私にとって、一番大切なことは安全第一、健康のこと、責任を持つこと、チームと協力すること、ルールを守ることです。",
+      ans_rm: "Watashi ni totte, ichiban taisetsu na koto wa anzen daiichi, kenkou no koto, sekinin o motsu koto, chiimu to kyouryoku suru koto, ruuru o mamoru koto desu.",
+      ans_bn: "আমার কাছে সবচেয়ে গুরুত্বপূর্ণ: নিরাপত্তা প্রথম, স্বাস্থ্য, দায়িত্ব গ্রহণ, দলগত কাজ এবং নিয়ম মানা।"
+    },
+    {
+      jp: "結婚していますか。",
+      romaji: "Kekkon shite imasu ka?",
+      bn: "বিবাহিত আছেন?",
+      ans_jp: "いいえ、まだ独身です。 / はい、もう結婚しました。",
+      ans_rm: "Iie, mada dokushin desu. / Hai, mou kekkon shimashita.",
+      ans_bn: "না, এখনো বিবাহিত নই। / হ্যাঁ, বিয়ে হয়েছে।"
+    },
+    {
+      jp: "宗教は何ですか。仕事中にお祈りができますか。",
+      romaji: "Shuukyou wa nan desu ka? Shigoto chuu ni oinori ga dekimasu ka?",
+      bn: "ধর্ম কী? কাজের সময় নামাজ পড়তে পারবেন?",
+      ans_jp: "私はイスラム教です。仕事中はできませんが、休憩時間や仕事が終わってからお祈りします。",
+      ans_rm: "Watashi wa Isuramu kyou desu. Shigoto chuu wa dekimasen ga, kyuukei jikan ya shigoto ga owatte kara oinori shimasu.",
+      ans_bn: "আমি মুসলিম। কাজের সময় পারব না, তবে বিরতির সময় বা কাজ শেষে নামাজ পড়ব।"
+    },
+    {
+      jp: "日本に行ったら、家族が寂しくないですか。",
+      romaji: "Nihon ni ittara, kazoku ga sabishiku nai desu ka?",
+      bn: "জাপানে গেলে পরিবারের জন্য কষ্ট হবে না?",
+      ans_jp: "寂しいかもしれませんが、すぐ家族に電話をかけられますので、心配しません。家族のために、一生懸命頑張ります。",
+      ans_rm: "Sabishii kamoshiremasen ga, sugu kazoku ni denwa o kakeraremasu no de, shinpai shimasen. Kazoku no tame ni, isshoukenmei ganbarimasu.",
+      ans_bn: "একটু কষ্ট হতে পারে, কিন্তু সাথে সাথে ফোন করতে পারব তাই চিন্তা নেই। পরিবারের জন্য কঠোর পরিশ্রম করব।"
+    },
+    {
+      jp: "面接に合格したら、どうですか。",
+      romaji: "Mensetsu ni goukaku shitara, dou desu ka?",
+      bn: "সাক্ষাৎকারে পাস করলে কেমন লাগবে?",
+      ans_jp: "もちろん嬉しいです。そして、本当に感謝しています。こちらの会社を失望させたくないんです。",
+      ans_rm: "Mochiron ureshii desu. Soshite, hontou ni kansha shite imasu. Kochira no kaisha o shitsubou sasetaku nai n desu.",
+      ans_bn: "অবশ্যই খুশি হব। এবং সত্যিই কৃতজ্ঞ থাকব। এই কোম্পানিকে হতাশ করতে চাই না।"
+    },
+    {
+      jp: "会社に質問がありますか。",
+      romaji: "Kaisha ni shitsumon ga arimasu ka?",
+      bn: "কোম্পানির জন্য কোনো প্রশ্ন আছে?",
+      ans_jp: "御社ではどのような人材を求めていますか？大きなチャンスをいただくためにはどんな分野を勉強すべきですか？",
+      ans_rm: "Onsha de wa donna jinzai o motomerarete imasu ka? Ooki na chansu o itadaku tame ni wa donna bunya o benkyou suru beki desu ka?",
+      ans_bn: "আপনাদের প্রতিষ্ঠানে কী ধরনের কর্মী দরকার? বড় সুযোগ পেতে কোন বিষয় পড়া উচিত?"
+    }
+  ],
+
+  school: [
+    {
+      jp: "なぜ日本語学校に入学したいですか。",
+      romaji: "Naze Nihongo gakkou ni nyuugaku shitai desu ka?",
+      bn: "কেন জাপানি ভাষা বিদ্যালয়ে ভর্তি হতে চান?",
+      ans_jp: "日本語をさらに上達させて、日本での生活や仕事にしっかり準備したいからです。JLPT N4に合格しましたが、まだN3やN2を目指しています。",
+      ans_rm: "Nihongo o sara ni joutatsu sasete, Nihon de no seikatsu ya shigoto ni shikkari junbi shitai kara desu. JLPT N4 ni goukaku shimashita ga, mada N3 ya N2 o mezashite imasu.",
+      ans_bn: "জাপানি ভাষা আরো উন্নত করে জাপানে জীবন ও কাজের জন্য ভালোভাবে প্রস্তুত হতে চাই। JLPT N4 পাস করেছি, এখন N3 বা N2 লক্ষ্য।"
+    },
+    {
+      jp: "日本語学校を卒業した後、どうするつもりですか。",
+      romaji: "Nihongo gakkou o sotsugyou shita ato, dou suru tsumori desu ka?",
+      bn: "ভাষা বিদ্যালয় শেষ করার পর কী করবেন?",
+      ans_jp: "卒業した後は、専門学校や大学に進学するか、専門的な仕事を見つけたいと思います。",
+      ans_rm: "Sotsugyou shita ato wa, senmon gakkou ya daigaku ni shingaku suru ka, senmon teki na shigoto o mitsuke tai to omoimasu.",
+      ans_bn: "বিদ্যালয় শেষে বিশেষায়িত বিদ্যালয় বা বিশ্ববিদ্যালয়ে পড়তে যাব, অথবা বিশেষজ্ঞ চাকরি খুঁজব।"
+    },
+    {
+      jp: "日本語をどうやって勉強しましたか。",
+      romaji: "Nihongo o douyatte benkyou shimashita ka?",
+      bn: "জাপানি ভাষা কীভাবে পড়েছেন?",
+      ans_jp: "LPKや語学学校で勉強しました。また、アプリやYouTubeなども使いました。毎日単語を覚えて、会話の練習をしています。",
+      ans_rm: "LPK ya gogaku gakkou de benkyou shimashita. Mata, apuri ya YouTube nado mo tsukaimashita. Mainichi tango o oboete, kaiwa no renshuu o shite imasu.",
+      ans_bn: "LPK বা ভাষা বিদ্যালয়ে পড়েছি। এছাড়া অ্যাপ ও ইউটিউবও ব্যবহার করেছি। প্রতিদিন শব্দ মুখস্থ করি এবং কথোপকথন অনুশীলন করি।"
+    },
+    {
+      jp: "JLPT N4に合格したことについて教えてください。",
+      romaji: "JLPT N4 ni goukaku shita koto ni tsuite oshiete kudasai.",
+      bn: "JLPT N4 পরীক্ষায় উত্তীর্ণ হওয়া সম্পর্কে বলুন।",
+      ans_jp: "はい、JLPT N4に合格しました。とても嬉しかったです。これからN3やN2も目指して、もっと頑張ります。",
+      ans_rm: "Hai, JLPT N4 ni goukaku shimashita. Totemo ureshikatta desu. Kore kara N3 ya N2 mo mezashite, motto ganbarimasu.",
+      ans_bn: "হ্যাঁ, JLPT N4 পরীক্ষায় পাস করেছি। খুব আনন্দিত হয়েছিলাম। এরপর N3 ও N2 লক্ষ্যে আরো পরিশ্রম করব।"
+    },
+    {
+      jp: "日本語学校での生活費はどうやって賄いますか。",
+      romaji: "Nihongo gakkou de no seikatsuhi wa douyatte makanaimasu ka?",
+      bn: "বিদ্যালয়ে পড়ার খরচ কীভাবে মেটাবেন?",
+      ans_jp: "両親が支援してくれます。また、アルバイトもしたいと思います（週28時間まで）。",
+      ans_rm: "Ryoushin ga shien shite kuremasu. Mata, arubaito mo shitai to omoimasu (shuu nijuuhachi jikan made).",
+      ans_bn: "বাবা-মা সহায়তা করবেন। এছাড়া পার্ট-টাইম কাজও করতে চাই (সপ্তাহে সর্বোচ্চ ২৮ ঘন্টা)।"
+    },
+    {
+      jp: "日本でアルバイトをするつもりですか。",
+      romaji: "Nihon de arubaito o suru tsumori desu ka?",
+      bn: "জাপানে পার্ট-টাইম কাজ করবেন?",
+      ans_jp: "はい、法律で認められた範囲内で、週28時間までアルバイトをしたいと思います。",
+      ans_rm: "Hai, houritsu de mitomerareta han'i nai de, shuu nijuuhachi jikan made arubaito o shitai to omoimasu.",
+      ans_bn: "হ্যাঁ, আইন অনুযায়ী সপ্তাহে সর্বোচ্চ ২৮ ঘন্টা পার্ট-টাইম কাজ করতে চাই।"
+    },
+    {
+      jp: "日本に来る前に準備したことを教えてください。",
+      romaji: "Nihon ni kuru mae ni junbi shita koto o oshiete kudasai.",
+      bn: "জাপানে আসার আগে কী প্রস্তুতি নিয়েছেন?",
+      ans_jp: "JLPT N4の取得と、日本語の会話練習をしました。また、日本の文化や生活習慣についても調べました。",
+      ans_rm: "JLPT N4 no shutoku to, Nihongo no kaiwa renshuu o shimashita. Mata, Nihon no bunka ya seikatsu shuukan ni tsuite mo shirabemashita.",
+      ans_bn: "JLPT N4 অর্জন ও জাপানি কথোপকথন অনুশীলন করেছি। এছাড়া জাপানের সংস্কৃতি ও জীবনযাত্রা সম্পর্কে গবেষণা করেছি।"
+    },
+    {
+      jp: "日本語学校でどんなことを勉強したいですか。",
+      romaji: "Nihongo gakkou de donna koto o benkyou shitai desu ka?",
+      bn: "ভাষা বিদ্যালয়ে কী শিখতে চান?",
+      ans_jp: "会話をもっと上手にしたいです。また、ビジネス日本語や専門的な語彙も学びたいと思います。",
+      ans_rm: "Kaiwa o motto jouzu ni shitai desu. Mata, bijinesu Nihongo ya senmon teki na goi mo manabitai to omoimasu.",
+      ans_bn: "কথোপকথন আরো ভালো করতে চাই। এছাড়া ব্যবসায়িক জাপানি ও বিশেষায়িত শব্দভান্ডারও শিখতে চাই।"
+    },
+    {
+      jp: "日本での生活で心配なことはありますか。",
+      romaji: "Nihon de no seikatsu de shinpai na koto wa arimasu ka?",
+      bn: "জাপানে জীবনযাপনে চিন্তার কিছু আছে?",
+      ans_jp: "いいえ、特に心配なことはありません。でも、もし困ったことがあれば、学校の先生や友達に相談します。",
+      ans_rm: "Iie, toku ni shinpai na koto wa arimasen. Demo, moshi komatta koto ga areba, gakkou no sensei ya tomodachi ni soudan shimasu.",
+      ans_bn: "না, বিশেষ কোনো চিন্তা নেই। তবে সমস্যা হলে বিদ্যালয়ের শিক্ষক বা বন্ধুর সাথে পরামর্শ করব।"
+    },
+    {
+      jp: "日本の学校生活で楽しみにしていることは何ですか。",
+      romaji: "Nihon no gakkou seikatsu de tanoshimi ni shite iru koto wa nan desu ka?",
+      bn: "জাপানের বিদ্যালয় জীবনে কী উপভোগ করার অপেক্ষা করছেন?",
+      ans_jp: "日本語の授業はもちろん、日本の文化体験や、いろいろな国からの留学生と友達になるのが楽しみです。",
+      ans_rm: "Nihongo no jugyou wa mochiron, Nihon no bunka taiken ya, iroiro na kuni kara no ryuugakusei to tomodachi ni naru no ga tanoshimi desu.",
+      ans_bn: "জাপানি ভাষার ক্লাসের পাশাপাশি জাপানের সংস্কৃতি অভিজ্ঞতা এবং বিভিন্ন দেশের ছাত্রদের সাথে বন্ধুত্ব করার অপেক্ষায় আছি।"
+    },
+    {
+      jp: "卒業後の目標を教えてください。",
+      romaji: "Sotsugyou go no mokuhyou o oshiete kudasai.",
+      bn: "স্নাতকের পর লক্ষ্য কী?",
+      ans_jp: "卒業後は、日本の大学院や専門学校に進学するか、日本語能力を活かして日本企業で働きたいと思います。",
+      ans_rm: "Sotsugyou go wa, Nihon no daigakuin ya senmon gakkou ni shingaku suru ka, Nihongo nouryoku o ikashite Nihon kigyou de hatarakitai to omoimasu.",
+      ans_bn: "স্নাতকের পর জাপানের স্নাতকোত্তর বা বিশেষায়িত বিদ্যালয়ে পড়তে যাব, অথবা জাপানি দক্ষতা কাজে লাগিয়ে জাপানি প্রতিষ্ঠানে কাজ করব।"
+    },
+    {
+      jp: "どうやって日本語の勉強を続けていますか。",
+      romaji: "Douyatte Nihongo no benkyou o tsuzukete imasu ka?",
+      bn: "জাপানি ভাষা পড়া কীভাবে চালিয়ে যাচ্ছেন?",
+      ans_jp: "毎日単語を覚えて、日本語の動画を見て、日本語で日記を書いています。",
+      ans_rm: "Mainichi tango o oboete, Nihongo no douga o mite, Nihongo de nikki o kaite imasu.",
+      ans_bn: "প্রতিদিন শব্দ মুখস্থ করি, জাপানি ভিডিও দেখি এবং জাপানি ভাষায় ডায়েরি লিখি।"
+    },
+    {
+      jp: "日本で勉強したい理由を詳しく教えてください。",
+      romaji: "Nihon de benkyou shitai riyuu o kuwashiku oshiete kudasai.",
+      bn: "জাপানে পড়তে চাওয়ার বিস্তারিত কারণ বলুন।",
+      ans_jp: "日本の教育レベルが高く、日本語を使いながら学べる環境が最適だと思います。また、日本の技術や文化も直接学べるからです。",
+      ans_rm: "Nihon no kyouiku reberu ga takaku, Nihongo o tsukai nagara manaberu kankyou ga saitekida to omoimasu. Mata, Nihon no gijutsu ya bunka mo chokusetsu manaberu kara desu.",
+      ans_bn: "জাপানের শিক্ষার মান উন্নত এবং জাপানি ভাষা ব্যবহার করে শেখার পরিবেশ সর্বোত্তম বলে মনে করি। এবং জাপানের প্রযুক্তি ও সংস্কৃতিও সরাসরি শেখা যাবে।"
+    },
+    {
+      jp: "日本に来てから困ったら、どうしますか。",
+      romaji: "Nihon ni kite kara komattara, dou shimasu ka?",
+      bn: "জাপানে আসার পর সমস্যা হলে কী করবেন?",
+      ans_jp: "学校の先生や生活指導員に相談します。また、学校が提供するサポートを利用したいと思います。",
+      ans_rm: "Gakkou no sensei ya seikatsu shidouin ni soudan shimasu. Mata, gakkou ga teikyou suru sapooto o riyou shitai to omoimasu.",
+      ans_bn: "বিদ্যালয়ের শিক্ষক বা জীবন পরামর্শদাতার সাথে কথা বলব। এবং বিদ্যালয় প্রদত্ত সহায়তা ব্যবহার করব।"
+    },
+    {
+      jp: "日本の文化について知っていることを教えてください。",
+      romaji: "Nihon no bunka ni tsuite shitte iru koto o oshiete kudasai.",
+      bn: "জাপানের সংস্কৃতি সম্পর্কে কী জানেন?",
+      ans_jp: "日本には「おもてなし」という文化があります。また、桜の花見、茶道、剣道など、独特の文化があります。アニメや漫画も世界中で有名です。",
+      ans_rm: "Nihon ni wa 'omotenashi' to iu bunka ga arimasu. Mata, sakura no hanami, sadou, kendou nado, dokutoku no bunka ga arimasu. Anime ya manga mo sekaijuu de yuumei desu.",
+      ans_bn: "জাপানে 'ওমোতেনাশি' (আতিথেয়তা) সংস্কৃতি আছে। এছাড়া চেরি ফুলের উৎসব, চা অনুষ্ঠান, তরবারি শিল্পসহ অনন্য সংস্কৃতি আছে। অ্যানিমে ও মাঙ্গাও বিশ্বখ্যাত।"
+    },
+    {
+      jp: "日本語が難しいと思う部分はどこですか。",
+      romaji: "Nihongo ga muzukashii to omou bubun wa doko desu ka?",
+      bn: "জাপানি ভাষার কোন অংশ কঠিন মনে হয়?",
+      ans_jp: "漢字が一番難しいと思います。でも、毎日練習することで少しずつ上達しています。敬語も難しいですが、日本語学校でしっかり学びたいです。",
+      ans_rm: "Kanji ga ichiban muzukashii to omoimasu. Demo, mainichi renshuu suru koto de sukoshi zutsu joutatsu shite imasu. Keigo mo muzukashii desu ga, Nihongo gakkou de shikkari manabitai desu.",
+      ans_bn: "কাঞ্জি সবচেয়ে কঠিন মনে হয়। তবে প্রতিদিন অনুশীলনে ধীরে ধীরে উন্নতি হচ্ছে। সম্মানজনক ভাষাও কঠিন, তবে বিদ্যালয়ে ভালোভাবে শিখতে চাই।"
+    },
+    {
+      jp: "日本にいる間に達成したいことを教えてください。",
+      romaji: "Nihon ni iru aida ni tassei shitai koto o oshiete kudasai.",
+      bn: "জাপানে থাকার সময় কী অর্জন করতে চান?",
+      ans_jp: "日本語能力試験N2に合格することと、日本の文化を深く理解することを目標にしています。",
+      ans_rm: "Nihongo nouryoku shiken N2 ni goukaku suru koto to, Nihon no bunka o fukaku rikai suru koto o mokuhyou ni shite imasu.",
+      ans_bn: "জাপানি ভাষা দক্ষতা পরীক্ষা N2-তে পাস করা এবং জাপানের সংস্কৃতি গভীরভাবে বোঝা লক্ষ্য।"
+    },
+    {
+      jp: "学費の支払い計画を教えてください。",
+      romaji: "Gakuhi no shiharai keikaku o oshiete kudasai.",
+      bn: "পড়ার খরচের পরিকল্পনা বলুন।",
+      ans_jp: "両親が支援してくれます。また、奨学金の申請も検討しています。アルバイトを週28時間以内でして、生活費を補いたいと思います。",
+      ans_rm: "Ryoushin ga shien shite kuremasu. Mata, shougakukin no shinsei mo kentou shite imasu. Arubaito o shuu nijuuhachi jikan inai de shite, seikatsuhi o oginaitai to omoimasu.",
+      ans_bn: "বাবা-মা সহায়তা করবেন। বৃত্তির জন্যও আবেদন বিবেচনা করছি। সপ্তাহে ২৮ ঘন্টার মধ্যে পার্ট-টাইম কাজ করে জীবনযাত্রার খরচ মেটাব।"
+    },
+    {
+      jp: "日本での最初の1ヶ月はどう過ごすつもりですか。",
+      romaji: "Nihon de no saisho no hitotsu kagetsu wa dou sugosu tsumori desu ka?",
+      bn: "জাপানে প্রথম ১ মাস কীভাবে কাটাবেন?",
+      ans_jp: "まず生活環境に慣れることを優先します。学校のガイダンスをしっかり受けて、近所を探索して、生活に必要なものを整えたいと思います。",
+      ans_rm: "Mazu seikatsu kankyou ni nareru koto o yuusen shimasu. Gakkou no gaidansu o shikkari ukete, kinjo o tansakushite, seikatsu ni hitsuyou na mono o totonoetai to omoimasu.",
+      ans_bn: "প্রথমে জীবনযাত্রার পরিবেশে অভ্যস্ত হওয়াকে অগ্রাধিকার দেব। বিদ্যালয়ের গাইডেন্স মনোযোগ দিয়ে নেব, আশেপাশে ঘুরে দেখব এবং জীবনের প্রয়োজনীয় সব গুছিয়ে নেব।"
+    },
+    {
+      jp: "なぜこの学校を選びましたか。",
+      romaji: "Naze kono gakkou o erabimashita ka?",
+      bn: "কেন এই বিদ্যালয় বেছে নিয়েছেন?",
+      ans_jp: "この学校の評判が良く、教育の質が高いと聞きました。また、外国人学生へのサポートが充実していると思います。",
+      ans_rm: "Kono gakkou no hyouban ga yoku, kyouiku no shitsu ga takai to kikimashita. Mata, gaikokujin gakusei e no sapooto ga juujitsu shite iru to omoimasu.",
+      ans_bn: "এই বিদ্যালয়ের সুনাম ভালো এবং শিক্ষার মান উচ্চ শুনেছি। এছাড়া বিদেশী শিক্ষার্থীদের জন্য সহায়তা পর্যাপ্ত বলে মনে করি।"
+    }
+  ],
+
+  embassy: [
+    {
+      jp: "なぜ日本の語学学校に入学したいのですか。",
+      romaji: "Naze Nihon no gogaku gakkou ni nyuugaku shitai no desu ka?",
+      bn: "কেন জাপানি ভাষা বিদ্যালয়ে ভর্তি হতে চান?",
+      ans_jp: "日本語をより深く学んで、日本での将来のキャリアや生活に備えたいからです。JLPT N4は取得しましたが、より高いレベルを目指しています。",
+      ans_rm: "Nihongo o yori fukaku mananande, Nihon de no shourai no kiyaria ya seikatsu ni sonaetai kara desu. JLPT N4 wa shutoku shimashita ga, yori takai reberu o mezashite imasu.",
+      ans_bn: "জাপানি ভাষা আরো গভীরভাবে শিখে জাপানে ভবিষ্যৎ ক্যারিয়ার ও জীবনের জন্য প্রস্তুত হতে চাই। JLPT N4 অর্জন করেছি, এখন উচ্চতর স্তর লক্ষ্য।"
+    },
+    {
+      jp: "日本から帰国した後は何をするつもりですか。",
+      romaji: "Nihon kara kikoku shita ato wa nani o suru tsumori desu ka?",
+      bn: "জাপান থেকে দেশে ফেরার পর কী করবেন?",
+      ans_jp: "日本で学んだことを活かして、自分でビジネスを始めたいと思います。または、日本語を使った仕事を自国で見つけたいです。",
+      ans_rm: "Nihon de mananda koto o ikashite, jibun de bijinesu o hajimetai to omoimasu. Matawa, Nihongo o tsukatta shigoto o jikoku de mitsuke tai desu.",
+      ans_bn: "জাপানে শেখা জ্ঞান কাজে লাগিয়ে নিজের ব্যবসা শুরু করতে চাই। অথবা নিজের দেশে জাপানি ভাষা সংশ্লিষ্ট চাকরি খুঁজব।"
+    },
+    {
+      jp: "学費や生活費はどうやって賄いますか。",
+      romaji: "Gakuhi ya seikatsuhi wa douyatte makanaimasu ka?",
+      bn: "পড়ার ও জীবনযাত্রার খরচ কীভাবে মেটাবেন?",
+      ans_jp: "両親が支援してくれます。また、学校の規則に従って週28時間以内でアルバイトをするつもりです。",
+      ans_rm: "Ryoushin ga shien shite kuremasu. Mata, gakkou no kisoku ni shitagatte shuu nijuuhachi jikan inai de arubaito o suru tsumori desu.",
+      ans_bn: "বাবা-মা সহায়তা করবেন। এছাড়া বিদ্যালয়ের নিয়ম অনুযায়ী সপ্তাহে ২৮ ঘন্টার মধ্যে পার্ট-টাইম কাজ করব।"
+    },
+    {
+      jp: "日本に来る目的は何ですか。",
+      romaji: "Nihon ni kuru mokuteki wa nan desu ka?",
+      bn: "জাপানে আসার উদ্দেশ্য কী?",
+      ans_jp: "日本語を勉強するために語学学校に入学することが主な目的です。日本の文化も学びたいと思います。",
+      ans_rm: "Nihongo o benkyou suru tame ni gogaku gakkou ni nyuugaku suru koto ga omona mokuteki desu. Nihon no bunka mo manabitai to omoimasu.",
+      ans_bn: "জাপানি ভাষা পড়ার জন্য ভাষা বিদ্যালয়ে ভর্তি হওয়াই মূল উদ্দেশ্য। জাপানের সংস্কৃতিও শিখতে চাই।"
+    },
+    {
+      jp: "なぜこの特定の学校を選びましたか。",
+      romaji: "Naze kono tokutei no gakkou o erabimashita ka?",
+      bn: "কেন এই নির্দিষ্ট বিদ্যালয় বেছে নিলেন?",
+      ans_jp: "この学校は評判が良く、教育の質が高いと聞きました。また、外国人学生へのサポートも充実しています。",
+      ans_rm: "Kono gakkou wa hyouban ga yoku, kyouiku no shitsu ga takai to kikimashita. Mata, gaikokujin gakusei e no sapooto mo juujitsu shite imasu.",
+      ans_bn: "এই বিদ্যালয়ের সুনাম ভালো এবং শিক্ষার মান উচ্চ শুনেছি। এছাড়া বিদেশী শিক্ষার্থীদের জন্য সহায়তাও পর্যাপ্ত।"
+    },
+    {
+      jp: "どのくらいの期間、日本に滞在する予定ですか。",
+      romaji: "Donokurai no kikan, Nihon ni taizai suru yotei desu ka?",
+      bn: "কতদিন জাপানে থাকার পরিকল্পনা?",
+      ans_jp: "語学学校の在籍期間である【X】年間滞在する予定です。その後は帰国する予定です。",
+      ans_rm: "[X] nenkan taizai suru yotei desu. Sono ato wa kikoku suru yotei desu.",
+      ans_bn: "ভাষা বিদ্যালয়ের মেয়াদ অনুযায়ী [X] বছর থাকার পরিকল্পনা। তারপর দেশে ফিরব।"
+    },
+    {
+      jp: "ご両親はあなたの日本行きについて知っていますか。賛成していますか。",
+      romaji: "Go ryoushin wa anata no Nihon yuki ni tsuite shitte imasu ka? Sansei shite imasu ka?",
+      bn: "বাবা-মা কি আপনার জাপান যাওয়ার ব্যাপারে জানেন? সম্মত আছেন?",
+      ans_jp: "はい、両親は知っています。私のことを応援してくれています。将来のために頑張ってほしいと言われました。",
+      ans_rm: "Hai, ryoushin wa shitte imasu. Watashi no koto o ouen shite kurete imasu. Shourai no tame ni ganbatte hoshii to iwaremashita.",
+      ans_bn: "হ্যাঁ, বাবা-মা জানেন। আমাকে উৎসাহিত করছেন। ভবিষ্যতের জন্য পরিশ্রম করতে বলেছেন।"
+    },
+    {
+      jp: "日本語はどのくらいできますか。",
+      romaji: "Nihongo wa donokurai dekimasu ka?",
+      bn: "জাপানি ভাষায় দক্ষতা কতটুকু?",
+      ans_jp: "JLPT N4レベルの日本語ができます。日常会話は問題ありませんが、まだ勉強を続けています。",
+      ans_rm: "JLPT N4 reberu no Nihongo ga dekimasu. Nichijou kaiwa wa mondai arimasen ga, mada benkyou o tsuzukete imasu.",
+      ans_bn: "JLPT N4 স্তরের জাপানি পারি। দৈনন্দিন কথোপকথনে সমস্যা নেই, তবে এখনো পড়াশোনা চালিয়ে যাচ্ছি।"
+    },
+    {
+      jp: "日本で困ったときは誰に連絡しますか。",
+      romaji: "Nihon de komatta toki wa dare ni renraku shimasu ka?",
+      bn: "জাপানে সমস্যায় পড়লে কার সাথে যোগাযোগ করবেন?",
+      ans_jp: "まず学校の先生に連絡します。また、大使館や領事館にも連絡できます。",
+      ans_rm: "Mazu gakkou no sensei ni renraku shimasu. Mata, taishikan ya ryoujikan ni mo renraku dekimasu.",
+      ans_bn: "প্রথমে বিদ্যালয়ের শিক্ষকের সাথে যোগাযোগ করব। এছাড়া দূতাবাস বা কনসুলেটেও যোগাযোগ করতে পারব।"
+    },
+    {
+      jp: "日本語学校を卒業後の計画を教えてください。",
+      romaji: "Nihongo gakkou o sotsugyou go no keikaku o oshiete kudasai.",
+      bn: "ভাষা বিদ্যালয় শেষে পরিকল্পনা বলুন।",
+      ans_jp: "卒業後は大学院や専門学校への進学を考えています。もしくは帰国して日本語を活かした仕事を探します。",
+      ans_rm: "Sotsugyou go wa daigakuin ya senmon gakkou e no shingaku o kangaete imasu. Moshiku wa kikoku shite Nihongo o ikashita shigoto o sagashimasu.",
+      ans_bn: "স্নাতকের পর স্নাতকোত্তর বা বিশেষায়িত বিদ্যালয়ে যাওয়ার কথা ভাবছি। অথবা দেশে ফিরে জাপানি ভাষা কাজে লাগানো যায় এমন চাকরি খুঁজব।"
+    },
+    {
+      jp: "日本に来た後、ビザを延長するつもりですか。",
+      romaji: "Nihon ni kita ato, biza o enchou suru tsumori desu ka?",
+      bn: "জাপানে আসার পর ভিসা বাড়ানোর কথা ভাবছেন?",
+      ans_jp: "学業の進み具合によって、必要であれば延長を考えますが、基本的には学校の規定通りに在籍する予定です。",
+      ans_rm: "Gakugyou no susumi gu ai ni yotte, hitsuyou de areba enchou o kangaemasu ga, kihon teki ni wa gakkou no kitei doori ni zaiseki suru yotei desu.",
+      ans_bn: "পড়াশোনার অগ্রগতি অনুযায়ী প্রয়োজন হলে বাড়ানোর কথা ভাবব, তবে মূলত বিদ্যালয়ের নিয়ম অনুযায়ী থাকব।"
+    },
+    {
+      jp: "現在の職業は何ですか。",
+      romaji: "Genzai no shokugyou wa nan desu ka?",
+      bn: "বর্তমান পেশা কী?",
+      ans_jp: "現在は【職業】として働いています。 / 現在は日本語の勉強に専念しています。",
+      ans_rm: "Genzai wa [shokugyou] to shite hataraite imasu. / Genzai wa Nihongo no benkyou ni sennen shite imasu.",
+      ans_bn: "বর্তমানে [পেশা] হিসেবে কাজ করছি। / বর্তমানে জাপানি ভাষা পড়ায় মনোনিবেশ করছি।"
+    },
+    {
+      jp: "日本語学校の入学許可書はありますか。",
+      romaji: "Nihongo gakkou no nyuugaku kyokasho wa arimasu ka?",
+      bn: "ভাষা বিদ্যালয়ের ভর্তি অনুমতিপত্র আছে?",
+      ans_jp: "はい、あります。【学校名】から入学許可書をいただいています。",
+      ans_rm: "Hai, arimasu. [Gakkou mei] kara nyuugaku kyokasho o itadaite imasu.",
+      ans_bn: "হ্যাঁ, আছে। [বিদ্যালয়ের নাম] থেকে ভর্তি অনুমতিপত্র পেয়েছি।"
+    },
+    {
+      jp: "帰国する意思は確かですか。",
+      romaji: "Kikoku suru ishi wa tashika desu ka?",
+      bn: "দেশে ফেরার ইচ্ছা নিশ্চিত?",
+      ans_jp: "はい、確かです。学業が終わったら必ず帰国します。家族が待っていますし、帰国後の計画もあります。",
+      ans_rm: "Hai, tashika desu. Gakugyou ga owattara kanarazu kikoku shimasu. Kazoku ga matte imasu shi, kikoku go no keikaku mo arimasu.",
+      ans_bn: "হ্যাঁ, নিশ্চিত। পড়াশোনা শেষে অবশ্যই দেশে ফিরব। পরিবার অপেক্ষায় আছেন এবং দেশে ফেরার পরিকল্পনাও আছে।"
+    },
+    {
+      jp: "他の国でビザの拒否や問題がありましたか。",
+      romaji: "Hoka no kuni de biza no kyohi ya mondai ga arimashita ka?",
+      bn: "অন্য কোনো দেশে ভিসা প্রত্যাখ্যান বা সমস্যা হয়েছে?",
+      ans_jp: "いいえ、ありません。これが初めての海外渡航ビザ申請です。",
+      ans_rm: "Iie, arimasen. Kore ga hajimete no kaigai tokou biza shinsei desu.",
+      ans_bn: "না, হয়নি। এটাই প্রথমবার বিদেশ ভিসার আবেদন।"
+    },
+    {
+      jp: "日本で病気になったらどうしますか。",
+      romaji: "Nihon de byouki ni nattara dou shimasu ka?",
+      bn: "জাপানে অসুস্থ হলে কী করবেন?",
+      ans_jp: "学校の指示に従って病院に行きます。また、健康保険に加入するつもりです。",
+      ans_rm: "Gakkou no shiji ni shitagatte byouin ni ikimasu. Mata, kenkou hoken ni kanyuu suru tsumori desu.",
+      ans_bn: "বিদ্যালয়ের নির্দেশ মেনে হাসপাতালে যাব। এছাড়া স্বাস্থ্য বীমায় যোগ দেব।"
+    },
+    {
+      jp: "日本での住居はどうなりますか。",
+      romaji: "Nihon de no juukyo wa dou narimasu ka?",
+      bn: "জাপানে বাসস্থান কীভাবে হবে?",
+      ans_jp: "学校の寮に住む予定です。もしくは、学校が紹介してくれるアパートに住みます。",
+      ans_rm: "Gakkou no ryou ni sumu yotei desu. Moshiku wa, gakkou ga shoukai shite kureru apaato ni sumimasu.",
+      ans_bn: "বিদ্যালয়ের ছাত্রাবাসে থাকার পরিকল্পনা। অথবা বিদ্যালয় পরিচয় করিয়ে দেওয়া অ্যাপার্টমেন্টে থাকব।"
+    },
+    {
+      jp: "緊急時に連絡できる人は日本にいますか。",
+      romaji: "Kinkyuuji ni renraku dekiru hito wa Nihon ni imasu ka?",
+      bn: "জরুরি অবস্থায় জাপানে যোগাযোগ করার মতো কেউ আছেন?",
+      ans_jp: "学校の担当者がいます。また、大使館の緊急連絡先も把握しています。",
+      ans_rm: "Gakkou no tantousha ga imasu. Mata, taishikan no kinkyuu renrakusaki mo haaku shite imasu.",
+      ans_bn: "বিদ্যালয়ের দায়িত্বরত ব্যক্তি আছেন। এছাড়া দূতাবাসের জরুরি যোগাযোগ নম্বরও জানা আছে।"
+    },
+    {
+      jp: "日本語の能力を証明できますか。",
+      romaji: "Nihongo no nouryoku o shoumei dekimasu ka?",
+      bn: "জাপানি ভাষার দক্ষতা প্রমাণ করতে পারবেন?",
+      ans_jp: "はい、JLPT N4の合格証書があります。また、本日このように日本語で面接を受けています。",
+      ans_rm: "Hai, JLPT N4 no goukaku shousho ga arimasu. Mata, honjitsu kono you ni Nihongo de mensetsu o ukete imasu.",
+      ans_bn: "হ্যাঁ, JLPT N4 উত্তীর্ণের সনদ আছে। এবং আজ এভাবে জাপানি ভাষায় সাক্ষাৎকার দিচ্ছি।"
+    },
+    {
+      jp: "スポンサーはどなたですか。",
+      romaji: "Suponsaa wa donata desu ka?",
+      bn: "স্পনসর কে?",
+      ans_jp: "スポンサーは父/母/【保証人名】です。【職業】として働いています。",
+      ans_rm: "Suponsaa wa chichi / haha / [hoshounin mei] desu. [Shokugyou] to shite hataraite imasu.",
+      ans_bn: "স্পনসর হলেন বাবা/মা/[জামিনদারের নাম]। [পেশা] হিসেবে কাজ করেন।"
+    }
+  ],
+
+  pm: [
+    {
+      jp: "飲食料品製造の仕事をしたことがありますか。",
+      romaji: "Inshokuryouhin seizou no shigoto o shita koto ga arimasu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণের কাজের অভিজ্ঞতা আছে?",
+      ans_jp: "はい、家族の手伝いで食品加工のアルバイトをした経験があります。食材と調味料を混ぜたり、食品を包装したりしました。",
+      ans_rm: "Hai, kazoku no tetsudai de shokuhin kakou no arubaito o shita keiken ga arimasu. Shokuzai to choumiryou o mazewaseta ri, shokuhin o housou shitari shimashita.",
+      ans_bn: "হ্যাঁ, পরিবারকে সাহায্য করতে খাদ্য প্রক্রিয়াকরণের পার্ট-টাইম অভিজ্ঞতা আছে। খাদ্য উপাদান ও মশলা মেশানো এবং প্যাকেজিং করেছি।"
+    },
+    {
+      jp: "なぜ飲食料品製造を選びましたか。",
+      romaji: "Naze inshokuryouhin seizou o erabimashita ka?",
+      bn: "কেন খাদ্য প্রক্রিয়াকরণ বেছে নিলেন?",
+      ans_jp: "日本の企業がどのように品質の高い美味しい食品を管理しているかに興味があります。食品加工は生活に欠かせない仕事だと思います。",
+      ans_rm: "Nihon no kigyou ga donou ni shitsu no takai oishii shokuhin o kanri shite iru ka ni kyoumi ga arimasu. Shokuhin kakou wa seikatsu ni kakasenai shigoto da to omoimasu.",
+      ans_bn: "জাপানি প্রতিষ্ঠান কীভাবে মানসম্পন্ন সুস্বাদু খাবার পরিচালনা করে তাতে আগ্রহ আছে। খাদ্য প্রক্রিয়াকরণ জীবনে অপরিহার্য কাজ বলে মনে করি।"
+    },
+    {
+      jp: "飲食料品製造で一番大切なことは何ですか。",
+      romaji: "Inshokuryouhin seizou de ichiban taisetsu na koto wa nan desu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণে সবচেয়ে গুরুত্বপূর্ণ কী?",
+      ans_jp: "食品の安全と衛生管理が一番大切だと思います。また、温度と時間の管理、そして機械の正しい使い方も重要です。",
+      ans_rm: "Shokuhin no anzen to eisei kanri ga ichiban taisetsu da to omoimasu. Mata, ondo to jikan no kanri, soshite kikai no tadashii tsukaikata mo juuyou desu.",
+      ans_bn: "খাদ্যের নিরাপত্তা ও স্বাস্থ্যবিধি ব্যবস্থাপনা সবচেয়ে গুরুত্বপূর্ণ। এছাড়া তাপমাত্রা ও সময় নিয়ন্ত্রণ এবং যন্ত্রপাতির সঠিক ব্যবহারও গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "飲食料品製造に必要なスキルは何だと思いますか。",
+      romaji: "Inshokuryouhin seizou ni hitsuyou na sukiru wa nan da to omoimasu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণে কী দক্ষতা দরকার?",
+      ans_jp: "時間管理と問題解決能力が必要です。また、チームでの協力や機械の使い方も大切です。",
+      ans_rm: "Jikan kanri to mondai kaiketsu nouryoku ga hitsuyou desu. Mata, chiimu de no kyouryoku ya kikai no tsukaikata mo taisetsu desu.",
+      ans_bn: "সময় ব্যবস্থাপনা ও সমস্যা সমাধান দক্ষতা দরকার। এছাড়া দলগত সহযোগিতা ও যন্ত্রপাতির ব্যবহারও গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "飲食料品製造の仕事について何を知っていますか。",
+      romaji: "Inshokuryouhin seizou no shigoto ni tsuite nani o shitte imasu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণ কাজ সম্পর্কে কী জানেন?",
+      ans_jp: "食材を加工するための機械の使い方を知っています。食品の製造では温度と時間の管理が大切です。",
+      ans_rm: "Shokuzai o kakou suru tame no kikai no tsukaikata o shitte imasu. Shokuhin no seizou de wa ondo to jikan no kanri ga taisetsu desu.",
+      ans_bn: "খাদ্য উপাদান প্রক্রিয়াকরণের যন্ত্রপাতি চালানো জানি। খাদ্য উৎপাদনে তাপমাত্রা ও সময় নিয়ন্ত্রণ গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "食品加工で一番楽しいことは何ですか。",
+      romaji: "Shokuhin kakou de ichiban tanoshii koto wa nan desu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণে সবচেয়ে আনন্দের কী?",
+      ans_jp: "食材を加工するときが一番楽しいです。美味しい食品ができあがったときの達成感がとても良いです。",
+      ans_rm: "Shokuzai o kakou suru toki ga ichiban tanoshii desu. Oishii shokuhin ga dekiagatta toki no tassei kan ga totemo ii desu.",
+      ans_bn: "খাদ্য উপাদান প্রক্রিয়াকরণের সময়টা সবচেয়ে আনন্দের। সুস্বাদু খাবার তৈরি হলে যে অর্জনের অনুভূতি, সেটা দারুণ।"
+    },
+    {
+      jp: "日本の食品について知っていますか。",
+      romaji: "Nihon no shokuhin ni tsuite shitte imasu ka?",
+      bn: "জাপানি খাবার সম্পর্কে জানেন?",
+      ans_jp: "はい、知っています。例えば、寿司、うどん、天ぷらなどです。日本の食品はまだ食べたことがありませんが、ぜひ食べてみたいです。",
+      ans_rm: "Hai, shitte imasu. Tatoeba, sushi, udon, tenpura nado desu. Nihon no shokuhin wa mada tabeta koto ga arimasen ga, zehi tabete mitai desu.",
+      ans_bn: "হ্যাঁ, জানি। যেমন: সুশি, উডন, তেনপুরা ইত্যাদি। জাপানি খাবার এখনো খাইনি, তবে অবশ্যই খেয়ে দেখতে চাই।"
+    },
+    {
+      jp: "前の仕事で一番大変だったことは何ですか。",
+      romaji: "Mae no shigoto de ichiban taihen datta koto wa nan desu ka?",
+      bn: "আগের কাজে সবচেয়ে কঠিন কী ছিল?",
+      ans_jp: "前の仕事では、締め切りに間に合わせることが大変でした。でも、計画を立てて優先順位をつけることで解決しました。",
+      ans_rm: "Mae no shigoto de wa, shimekiri ni ma ni awaseru koto ga taihen deshita. Demo, keikaku o tatete yuusen jun'i o tsukeru koto de kaiketsu shimashita.",
+      ans_bn: "আগের কাজে সময়সীমার মধ্যে কাজ শেষ করা কঠিন ছিল। তবে পরিকল্পনা করে অগ্রাধিকার ঠিক করে সমাধান করেছি।"
+    },
+    {
+      jp: "この会社を選んだ理由を教えてください。",
+      romaji: "Kono kaisha o eranda riyuu o oshiete kudasai.",
+      bn: "এই কোম্পানি বেছে নেওয়ার কারণ বলুন।",
+      ans_jp: "この会社は私の性格に合った価値観と文化があります。また、食品加工において優れた技術を持っています。",
+      ans_rm: "Kono kaisha wa watashi no seikaku ni atta kachikan to bunka ga arimasu. Mata, shokuhin kakou ni oite sugureta gijutsu o motte imasu.",
+      ans_bn: "এই কোম্পানির মূল্যবোধ ও সংস্কৃতি আমার ব্যক্তিত্বের সাথে মেলে। এছাড়া খাদ্য প্রক্রিয়াকরণে চমৎকার প্রযুক্তি আছে।"
+    },
+    {
+      jp: "料理はできますか。",
+      romaji: "Ryouri wa dekimasu ka?",
+      bn: "রান্না করতে পারেন?",
+      ans_jp: "はい、インドネシア/バングラデシュ料理が作れます。幼い頃から母に様々な料理の作り方を教えていただきました。",
+      ans_rm: "Hai, Indonesia/Bangladesh ryouri ga tsukuremasu. Osanai koro kara haha ni iroiro na ryouri no tsukurikata o oshiete itadakimashita.",
+      ans_bn: "হ্যাঁ, ইন্দোনেশিয়া/বাংলাদেশের রান্না করতে পারি। ছোটবেলা থেকে মায়ের কাছে বিভিন্ন রান্না শিখেছি।"
+    },
+    {
+      jp: "食品の衛生管理について何を知っていますか。",
+      romaji: "Shokuhin no eisei kanri ni tsuite nani o shitte imasu ka?",
+      bn: "খাদ্যের স্বাস্থ্যবিধি ব্যবস্থাপনা সম্পর্কে কী জানেন?",
+      ans_jp: "食品を扱う時は手をよく洗い、清潔な道具を使うことが大切です。また、適切な温度での保存と、賞味期限の管理も重要です。",
+      ans_rm: "Shokuhin o atsukau toki wa te o yoku aratte, seiketsu na dougu o tsukau koto ga taisetsu desu. Mata, tekisetsu na ondo de no hozon to, shoumikigen no kanri mo juuyou desu.",
+      ans_bn: "খাবার পরিচালনার সময় ভালোভাবে হাত ধোয়া ও পরিষ্কার সরঞ্জাম ব্যবহার গুরুত্বপূর্ণ। সঠিক তাপমাত্রায় সংরক্ষণ ও মেয়াদ ব্যবস্থাপনাও গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "機械の操作は難しいと思いますか。",
+      romaji: "Kikai no sousa wa muzukashii to omoimasu ka?",
+      bn: "যন্ত্রপাতি চালানো কঠিন মনে হয়?",
+      ans_jp: "機械の使い方はまだよく分かりませんが、実際に機械を操作できるようになりたいと思っています。練習すれば必ずできると信じています。",
+      ans_rm: "Kikai no tsukaikata wa mada yoku wakarimasen ga, jissai ni kikai o sousa dekiru you ni naritai to omotte imasu. Renshuu sureba kanarazu dekiru to shinjite imasu.",
+      ans_bn: "যন্ত্রপাতির ব্যবহার এখনো পুরোপুরি জানি না, তবে সত্যিকারের চালনা করতে পারতে চাই। অনুশীলন করলে অবশ্যই পারব বলে বিশ্বাস।"
+    },
+    {
+      jp: "食品加工の中で一番難しいことは何ですか。",
+      romaji: "Shokuhin kakou no naka de ichiban muzukashii koto wa nan desu ka?",
+      bn: "খাদ্য প্রক্রিয়াকরণে সবচেয়ে কঠিন কী?",
+      ans_jp: "品質の一貫性を保つことが難しいと思います。でも、集中力を持って丁寧に作業することで解決できると思います。",
+      ans_rm: "Hinshitsu no ikkansei o tamotsu koto ga muzukashii to omoimasu. Demo, shuuchuryoku o motte teinei ni sagyou suru koto de kaiketsu dekiru to omoimasu.",
+      ans_bn: "গুণমানের ধারাবাহিকতা বজায় রাখা কঠিন বলে মনে হয়। তবে মনোযোগ দিয়ে সতর্কে কাজ করলে সমাধান হবে।"
+    },
+    {
+      jp: "長時間立ち仕事ができますか。",
+      romaji: "Choujikan tachishigoto ga dekimasu ka?",
+      bn: "দীর্ঘক্ষণ দাঁড়িয়ে কাজ করতে পারবেন?",
+      ans_jp: "はい、できます。私は体力に自信があります。毎日運動しているので、長時間でも大丈夫です。",
+      ans_rm: "Hai, dekimasu. Watashi wa tairyoku ni jishin ga arimasu. Mainichi undou shite iru no de, choujikan demo daijoubu desu.",
+      ans_bn: "হ্যাঁ, পারব। শারীরিক সক্ষমতায় আত্মবিশ্বাস আছে। প্রতিদিন ব্যায়াম করি তাই দীর্ঘক্ষণও সমস্যা নেই।"
+    },
+    {
+      jp: "食品アレルギーはありますか。",
+      romaji: "Shokuhin arerugii wa arimasu ka?",
+      bn: "খাদ্য অ্যালার্জি আছে?",
+      ans_jp: "いいえ、食品アレルギーはありません。",
+      ans_rm: "Iie, shokuhin arerugii wa arimasen.",
+      ans_bn: "না, খাদ্য অ্যালার্জি নেই।"
+    },
+    {
+      jp: "冷蔵・冷凍環境での作業はできますか。",
+      romaji: "Reizou/Reitou kankyou de no sagyou wa dekimasu ka?",
+      bn: "ঠান্ডা/ফ্রিজিং পরিবেশে কাজ করতে পারবেন?",
+      ans_jp: "はい、できます。適切な防寒着を着用すれば問題ありません。",
+      ans_rm: "Hai, dekimasu. Tekisetsu na boukan-gi o chakuyou sureba mondai arimasen.",
+      ans_bn: "হ্যাঁ, পারব। যথাযথ শীতের পোশাক পরলে সমস্যা নেই।"
+    },
+    {
+      jp: "チームワークは得意ですか。",
+      romaji: "Chiimuwaaku wa tokui desu ka?",
+      bn: "দলগত কাজে দক্ষ?",
+      ans_jp: "はい、得意です。一人でも仕事できますが、チームで協力することが好きです。目標を共有して助け合うことが大切だと思います。",
+      ans_rm: "Hai, tokui desu. Hitori demo shigoto dekimasu ga, chiimu de kyouryoku suru koto ga suki desu. Mokuhyou o kyouyuu shite tasukeiai koto ga taisetsu da to omoimasu.",
+      ans_bn: "হ্যাঁ, দক্ষ। একা কাজ করতে পারি কিন্তু দলগত সহযোগিতা পছন্দ। লক্ষ্য ভাগ করে একে অপরকে সাহায্য করা গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "細かい作業が得意ですか。",
+      romaji: "Komakai sagyou ga tokui desu ka?",
+      bn: "সূক্ষ্ম কাজে দক্ষ?",
+      ans_jp: "はい、得意です。集中力があり、細かいことにも注意を払います。",
+      ans_rm: "Hai, tokui desu. Shuuchuryoku ga ari, komakai koto ni mo chuui o haraimasu.",
+      ans_bn: "হ্যাঁ, দক্ষ। মনোযোগ আছে এবং সূক্ষ্ম বিষয়েও সতর্ক থাকি।"
+    },
+    {
+      jp: "日本の食品製造の職場環境に馴染めると思いますか。",
+      romaji: "Nihon no shokuhin seizou no shokuba kankyou ni najimereru to omoimasu ka?",
+      bn: "জাপানের খাদ্য উৎপাদন কর্মক্ষেত্রে মানিয়ে নিতে পারবেন?",
+      ans_jp: "はい、できると思います。日本の労働環境にも適応できると信じています。ルールを守って、一生懸命働きます。",
+      ans_rm: "Hai, dekiru to omoimasu. Nihon no roudou kankyou ni mo tekiou dekiru to shinjite imasu. Ruuru o mamotte, isshoukenmei hatarakimasu.",
+      ans_bn: "হ্যাঁ, পারব বলে মনে করি। জাপানের কর্মপরিবেশে মানিয়ে নিতে পারব। নিয়ম মেনে পরিশ্রম করব।"
+    },
+    {
+      jp: "早起きできますか。何時に起きますか。",
+      romaji: "Hayaoki dekimasu ka? Nan ji ni okimasu ka?",
+      bn: "সকালে ওঠতে পারবেন? কয়টায় ওঠেন?",
+      ans_jp: "はい、早起きできます。毎日【X】時頃起きています。規律正しい生活が好きです。",
+      ans_rm: "Hai, hayaoki dekimasu. Mainichi [X] ji goro okite imasu. Kiritsu tadashii seikatsu ga suki desu.",
+      ans_bn: "হ্যাঁ, সকালে উঠতে পারব। প্রতিদিন [X] টার দিকে উঠি। নিয়মানুবর্তী জীবন পছন্দ।"
+    },
+    {
+      jp: "前職の給料はいくらでしたか。",
+      romaji: "Zenshoku no kyuuryou wa ikura deshita ka?",
+      bn: "আগের চাকরিতে বেতন কত ছিল?",
+      ans_jp: "前職の給料は1ヶ月に約【X】円（/ルピア）でした。",
+      ans_rm: "Zenshoku no kyuuryou wa ikkagetsu ni yaku [X] en (/rupia) deshita.",
+      ans_bn: "আগের চাকরিতে মাসে প্রায় [X] ইয়েন (রুপিয়া) বেতন ছিল।"
+    },
+    {
+      jp: "休みの日は何をしますか。",
+      romaji: "Yasumi no hi wa nani o shimasu ka?",
+      bn: "ছুটির দিনে কী করেন?",
+      ans_jp: "休みの日は運動をしたり、料理を作ったり、日本語を勉強したりします。",
+      ans_rm: "Yasumi no hi wa undou o shitari, ryouri o tsukuttari, Nihongo o benkyou shitari shimasu.",
+      ans_bn: "ছুটির দিনে ব্যায়াম করি, রান্না করি এবং জাপানি ভাষা পড়ি।"
+    },
+    {
+      jp: "日本の食品業界で挑戦したいことがありますか。",
+      romaji: "Nihon no shokuhin gyoukai de chousen shitai koto ga arimasu ka?",
+      bn: "জাপানের খাদ্য শিল্পে কী চ্যালেঞ্জ নিতে চান?",
+      ans_jp: "日本の最先端の食品加工技術を学んで、その知識を帰国後に活かしたいです。",
+      ans_rm: "Nihon no saisentan no shokuhin kakou gijutsu o manande, sono chishiki o kikoku go ni ikashitai desu.",
+      ans_bn: "জাপানের অত্যাধুনিক খাদ্য প্রক্রিয়াকরণ প্রযুক্তি শিখে দেশে ফেরার পর সেই জ্ঞান কাজে লাগাতে চাই।"
+    },
+    {
+      jp: "どのくらいの給料を希望しますか。",
+      romaji: "Donokurai no kyuuryou o kibou shimasu ka?",
+      bn: "কত বেতন চান?",
+      ans_jp: "日本の法律で定められた最低賃金以上であれば問題ありません。",
+      ans_rm: "Nihon no houritsu de sadamerareta saitei chingin ijou de areba mondai arimasen.",
+      ans_bn: "জাপানি আইনে নির্ধারিত ন্যূনতম মজুরির বেশি হলেই সমস্যা নেই।"
+    }
+  ],
+
+  kaigo: [
+    {
+      jp: "介護の仕事を選んだ理由を教えてください。",
+      romaji: "Kaigo no shigoto o eranda riyuu o oshiete kudasai.",
+      bn: "সেবা পরিচর্যার কাজ বেছে নেওয়ার কারণ বলুন।",
+      ans_jp: "介護の仕事は人を助ける素晴らしい仕事だと思います。また、日本では高齢者の人口が増えているので、高齢者の生活を手伝いたいと思いました。",
+      ans_rm: "Kaigo no shigoto wa hito o tasukeru subarashii shigoto da to omoimasu. Mata, Nihon de wa koureisha no jinkou ga fuete iru no de, koureisha no seikatsu o tetsudaitai to omoimashita.",
+      ans_bn: "সেবা পরিচর্যার কাজ মানুষকে সাহায্য করার চমৎকার পেশা। এছাড়া জাপানে বৃদ্ধ জনসংখ্যা বাড়ছে তাই বৃদ্ধদের জীবনে সাহায্য করতে চাই।"
+    },
+    {
+      jp: "介護の仕事の経験がありますか。",
+      romaji: "Kaigo no shigoto no keiken ga arimasu ka?",
+      bn: "সেবা পরিচর্যার কাজের অভিজ্ঞতা আছে?",
+      ans_jp: "介護の仕事をしたことはありませんが、こちらの会社のために、経験がなくても上手く仕事ができること信じております。一生懸命頑張ります。",
+      ans_rm: "Kaigo no shigoto o shita koto wa arimasen ga, kochira no kaisha no tame ni, keiken ga nakute mo umaku iku shigoto ga dekiru koto shinjite orimasu. Isshoukenmei ganbarimasu.",
+      ans_bn: "সেবা পরিচর্যার কাজের অভিজ্ঞতা নেই, তবে এই কোম্পানির জন্য অভিজ্ঞতা না থাকলেও ভালোভাবে কাজ করতে পারব বলে বিশ্বাস। কঠোর পরিশ্রম করব।"
+    },
+    {
+      jp: "介護の仕事は何ですか。",
+      romaji: "Kaigo no shigoto wa nan desu ka?",
+      bn: "সেবা পরিচর্যার কাজ কী?",
+      ans_jp: "介護の仕事は高齢者の生活を助けることです。毎日体調をチェックして、入浴の介助、食事の介助、排泄の介助などがあります。",
+      ans_rm: "Kaigo no shigoto wa koureisha no seikatsu o tasukeru koto desu. Mainichi taichou o chekku shite, nyuuyoku no kaijo, shokuji no kaijo, haisetsu no kaijo nado ga arimasu.",
+      ans_bn: "সেবা পরিচর্যার কাজ হলো বৃদ্ধদের জীবনে সাহায্য করা। প্রতিদিন স্বাস্থ্য পরীক্ষা, গোসল সহায়তা, খাওয়ার সহায়তা, টয়লেট সহায়তা ইত্যাদি।"
+    },
+    {
+      jp: "高齢者と接することは得意ですか。",
+      romaji: "Koureisha to sesuru koto wa tokui desu ka?",
+      bn: "বয়স্কদের সাথে মেলামেশায় দক্ষ?",
+      ans_jp: "はい、得意です。入浴介助や食事介助、排泄介助などは子供にするので、もう慣れました。ですから仕事は私に合っていると思います。",
+      ans_rm: "Hai, tokui desu. Nyuuyoku kaijo ya shokuji kaijo, haisetsu kaijo nado wa kodomo ni suru no de, mou naremashita. Desukara shigoto wa watashi ni atte iru to omoimasu.",
+      ans_bn: "হ্যাঁ, দক্ষ। গোসল, খাওয়ার ও টয়লেট সহায়তা বাচ্চাদের ক্ষেত্রে করেছি তাই অভ্যস্ত। তাই এই কাজ আমার জন্য উপযুক্ত মনে হয়।"
+    },
+    {
+      jp: "介護の仕事で大変なことは何ですか。",
+      romaji: "Kaigo no shigoto de taihen na koto wa nan desu ka?",
+      bn: "সেবা পরিচর্যায় সবচেয়ে কঠিন কী?",
+      ans_jp: "体力的にも精神的にも大変な仕事だと思います。でも、利用者が笑顔になったときの喜びが大きいので、頑張れると思います。",
+      ans_rm: "Tairyokuteki ni mo seisin teki ni mo taihen na shigoto da to omoimasu. Demo, riyousha ga egao ni natta toki no yorokobi ga ooki i no de, ganbareru to omoimasu.",
+      ans_bn: "শারীরিক ও মানসিকভাবে কঠিন কাজ বলে মনে হয়। তবে ব্যবহারকারী হাসলে যে আনন্দ মেলে তাতে পরিশ্রম করা যাবে।"
+    },
+    {
+      jp: "夜勤や早番はできますか。",
+      romaji: "Yakin ya hayaban wa dekimasu ka?",
+      bn: "রাতের শিফট বা সকালের শিফট করতে পারবেন?",
+      ans_jp: "はい、夜勤も早番も大丈夫です。体力に自信がありますので、どのシフトでも対応できます。",
+      ans_rm: "Hai, yakin mo hayaban mo daijoubu desu. Tairyoku ni jishin ga arimasu no de, dono shifuto demo taiou dekimasu.",
+      ans_bn: "হ্যাঁ, রাতের ও সকালের শিফট উভয়ই ঠিক আছে। শারীরিক সক্ষমতায় আত্মবিশ্বাস আছে, যেকোনো শিফট সামলাতে পারব।"
+    },
+    {
+      jp: "認知症の方に対してどう接しますか。",
+      romaji: "Ninchishou no kata ni taishite dou sesshimasu ka?",
+      bn: "স্মৃতিভ্রংশ রোগীর সাথে কীভাবে আচরণ করবেন?",
+      ans_jp: "根気強く、穏やかに接します。相手の気持ちを理解しようとして、安心感を与えられるように頑張ります。",
+      ans_rm: "Kinkizuyoku, odayaka ni sesshimasu. Aite no kimochi o rikai shiyou to shite, anshin kan o ataereru you ni ganbarimasu.",
+      ans_bn: "ধৈর্য ধরে শান্তভাবে আচরণ করব। প্রতিপক্ষের অনুভূতি বোঝার চেষ্টা করব এবং স্বস্তি দেওয়ার চেষ্টা করব।"
+    },
+    {
+      jp: "介護の仕事でやりがいを感じることは何ですか。",
+      romaji: "Kaigo no shigoto de yarigai o kanjiru koto wa nan desu ka?",
+      bn: "সেবা পরিচর্যায় কীসে অনুপ্রাণিত বোধ করেন?",
+      ans_jp: "利用者が喜んでいる姿を見たときや、「ありがとう」と言われたときにやりがいを感じます。",
+      ans_rm: "Riyousha ga yorokonde iru sugata o mita toki ya, 'arigatou' to iwareta toki ni yarigai o kanjimasu.",
+      ans_bn: "ব্যবহারকারী আনন্দিত হলে বা 'ধন্যবাদ' বললে অনুপ্রেরণা অনুভব করি।"
+    },
+    {
+      jp: "なぜ日本で介護の仕事がしたいですか。",
+      romaji: "Naze Nihon de kaigo no shigoto ga shitai desu ka?",
+      bn: "কেন জাপানে সেবা পরিচর্যার কাজ করতে চান?",
+      ans_jp: "日本の介護技術は世界トップレベルです。日本で働くことで、高い技術を学べます。また、仕事中に日本語の会話が上手になりやすいです。",
+      ans_rm: "Nihon no kaigo gijutsu wa sekai toppu reberu desu. Nihon de hataraku koto de, takai gijutsu o manabemasu. Mata, shigoto chuu ni Nihongo no kaiwa ga jouzu ni nari yasui desu.",
+      ans_bn: "জাপানের সেবা পরিচর্যা প্রযুক্তি বিশ্বমানের। জাপানে কাজ করলে উন্নত প্রযুক্তি শেখা যাবে। এছাড়া কাজের সময় জাপানি কথোপকথনও উন্নত হবে।"
+    },
+    {
+      jp: "緊急時はどう対応しますか。",
+      romaji: "Kinkyuuji wa dou taiou shimasu ka?",
+      bn: "জরুরি অবস্থায় কীভাবে সামলাবেন?",
+      ans_jp: "まず上司や看護師に報告します。そして、指示に従って行動します。冷静に対処することが大切だと思います。",
+      ans_rm: "Mazu joushi ya kango-shi ni houkoku shimasu. Soshite, shiji ni shitagatte koudou shimasu. Reisei ni taisho suru koto ga taisetsu da to omoimasu.",
+      ans_bn: "প্রথমে উর্ধ্বতন বা নার্সকে জানাব। তারপর নির্দেশ মেনে কাজ করব। শান্তভাবে পরিস্থিতি সামলানো গুরুত্বপূর্ণ।"
+    },
+    {
+      jp: "利用者のプライバシーについてどう思いますか。",
+      romaji: "Riyousha no puraibashii ni tsuite dou omoimasu ka?",
+      bn: "ব্যবহারকারীর গোপনীয়তা সম্পর্কে কী মনে করেন?",
+      ans_jp: "利用者のプライバシーを守ることは最も大切なことの一つだと思います。仕事で知ったことは外で話しません。",
+      ans_rm: "Riyousha no puraibashii o mamoru koto wa mottomo taisetsu na koto no hitotsu da to omoimasu. Shigoto de shitta koto wa soto de hanashimasen.",
+      ans_bn: "ব্যবহারকারীর গোপনীয়তা রক্ষা করা সবচেয়ে গুরুত্বপূর্ণ বিষয়গুলোর একটি। কাজে জানা কথা বাইরে বলব না।"
+    },
+    {
+      jp: "チームのメンバーとうまく連携できますか。",
+      romaji: "Chiimu no menbaa to umaku renkei dekimasu ka?",
+      bn: "দলের সদস্যদের সাথে ভালোভাবে সহযোগিতা করতে পারবেন?",
+      ans_jp: "はい、できます。チームワークが大切だと思います。情報共有と協力が良いケアにつながると思います。",
+      ans_rm: "Hai, dekimasu. Chiimuwaaku ga taisetsu da to omoimasu. Jouhou kyouyuu to kyouryoku ga yoi kea ni tsunagaru to omoimasu.",
+      ans_bn: "হ্যাঁ, পারব। দলগত কাজ গুরুত্বপূর্ণ। তথ্য ভাগ ও সহযোগিতা ভালো পরিচর্যায় সাহায্য করে।"
+    },
+    {
+      jp: "自分の健康管理はどのようにしていますか。",
+      romaji: "Jibun no kenkou kanri wa dono you ni shite imasu ka?",
+      bn: "নিজের স্বাস্থ্য ব্যবস্থাপনা কীভাবে করেন?",
+      ans_jp: "毎日運動して、バランスの良い食事をとり、十分な睡眠をとるようにしています。",
+      ans_rm: "Mainichi undou shite, baransu no yoi shokuji o tori, juubun na suimin o toru you ni shite imasu.",
+      ans_bn: "প্রতিদিন ব্যায়াম করি, সুষম খাবার খাই এবং পর্যাপ্ত ঘুমানোর চেষ্টা করি।"
+    },
+    {
+      jp: "感染症対策について何を知っていますか。",
+      romaji: "Kansenshou taisaku ni tsuite nani o shitte imasu ka?",
+      bn: "সংক্রামক রোগ প্রতিরোধ সম্পর্কে কী জানেন?",
+      ans_jp: "手洗い、マスクの着用、消毒などが基本的な感染症対策です。利用者の健康を守るために、これらを徹底したいと思います。",
+      ans_rm: "Tearai, masuku no chakuyou, shoudo ku nado ga kihon teki na kansenshou taisaku desu. Riyousha no kenkou o mamoru tame ni, korera o tettei shitai to omoimasu.",
+      ans_bn: "হাত ধোয়া, মাস্ক পরা, জীবাণুমুক্তকরণ ইত্যাদি মূলভিত্তিক সংক্রামক রোগ প্রতিরোধ। ব্যবহারকারীর স্বাস্থ্য রক্ষায় এগুলো কঠোরভাবে মানব।"
+    },
+    {
+      jp: "利用者が辛そうにしているとき、どうしますか。",
+      romaji: "Riyousha ga tsurashisou ni shite iru toki, dou shimasu ka?",
+      bn: "ব্যবহারকারী কষ্টে থাকলে কী করবেন?",
+      ans_jp: "まず話を聞いて、気持ちに寄り添います。そして、状況に応じて上司や看護師に報告します。",
+      ans_rm: "Mazu hanashi o kiite, kimochi ni yorisoimasu. Soshite, joukyou ni oujite joushi ya kangoshi ni houkoku shimasu.",
+      ans_bn: "প্রথমে কথা শুনব এবং অনুভূতির সাথে সহানুভূতি দেখাব। তারপর পরিস্থিতি অনুযায়ী উর্ধ্বতন বা নার্সকে জানাব।"
+    }
+  ]
+};
+
+// ============================================================
+// RENDER
+// ============================================================
+
+let viewedCards = new Set();
+let totalCards = 0;
+
+function renderCards(gridId, items, category) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  grid.innerHTML = '';
+  totalCards += items.length;
+  items.forEach((item, i) => {
+    const cardId = `${category}-${i}`;
+    const card = document.createElement('div');
+    card.className = 'q-card' + (category === 'embassy' ? ' embassy-card' : '');
+    card.dataset.category = category;
+    card.dataset.search = [item.jp, item.romaji, item.bn, item.ans_jp||'', item.ans_rm||'', item.ans_bn||''].join(' ').toLowerCase();
+    card.innerHTML = `
+      <div class="q-header" onclick="toggleCard(this)">
+        <span class="q-num">#${String(i+1).padStart(2,'0')}</span>
+        <div class="q-content">
+          <div class="q-japanese">${item.jp}</div>
+          <div class="q-romaji">${item.romaji}</div>
+          <div class="q-bengali">${item.bn}</div>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          ${item.ans_jp ? `<div class="answer-block">
+            <span class="answer-label jp">日本語</span>
+            <div class="answer-text-jp">${item.ans_jp}</div>
+          </div>` : ''}
+          ${item.ans_rm ? `<div class="answer-block">
+            <span class="answer-label rm">Romaji</span>
+            <div class="answer-text-rm">${item.ans_rm}</div>
+          </div>` : ''}
+          ${item.ans_bn ? `<div class="answer-block">
+            <span class="answer-label bn">বাংলা</span>
+            <div class="answer-text-bn">${item.ans_bn}</div>
+          </div>` : ''}
+          <button class="copy-btn" onclick="copyAnswer(this, event)" data-text="${encodeURIComponent([item.ans_jp||'',item.ans_rm||'',item.ans_bn||''].join('\n\n'))}">
+            📋 উত্তর কপি করুন
+          </button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+  const cnt = document.getElementById('cnt-' + gridId.replace('grid-', ''));
+  if (cnt) cnt.textContent = items.length + ' Q';
+}
+
+function toggleCard(header) {
+  const card = header.closest('.q-card');
+  const wasOpen = card.classList.contains('open');
+  card.classList.toggle('open');
+  if (!wasOpen) {
+    viewedCards.add(card.dataset.category + card.querySelector('.q-num').textContent);
+    updateProgress();
+  }
+}
+
+function updateProgress() {
+  const pct = Math.round((viewedCards.size / totalCards) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = viewedCards.size + ' টি প্রশ্ন দেখা হয়েছে (' + pct + '%)';
+}
+
+function resetProgress() {
+  viewedCards.clear();
+  document.querySelectorAll('.q-card').forEach(c => c.classList.remove('open'));
+  updateProgress();
+}
+
+function expandAll() {
+  const visible = document.querySelectorAll('.q-card:not([style*="display: none"])');
+  visible.forEach(c => {
+    c.classList.add('open');
+    viewedCards.add(c.dataset.category + c.querySelector('.q-num').textContent);
+  });
+  updateProgress();
+}
+
+function copyAnswer(btn, e) {
+  e.stopPropagation();
+  const text = decodeURIComponent(btn.dataset.text);
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ কপি হয়েছে!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.innerHTML = '📋 উত্তর কপি করুন';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+function copyTemplate() {
+  const lines = document.querySelectorAll('.tl-jp');
+  let text = '';
+  lines.forEach(l => text += l.textContent.replace('(おじぎ)', '[おじぎ]').trim() + '\n');
+  navigator.clipboard.writeText(text).then(() => alert('টেমপ্লেট কপি হয়েছে!'));
+}
+
+// SEARCH & FILTER
+const searchInput = document.getElementById('searchInput');
+const filterTabs = document.querySelectorAll('.filter-tab');
+let activeFilter = 'all';
+
+searchInput.addEventListener('input', filterAll);
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    activeFilter = tab.dataset.filter;
+    filterAll();
+  });
+});
+
+function filterAll() {
+  const q = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.q-card');
+  let visible = 0;
+
+  document.querySelectorAll('.section').forEach(sec => {
+    const sectionCat = sec.dataset.section;
+    if (sectionCat === 'jikoshokai') {
+      sec.style.display = (activeFilter === 'all' || activeFilter === 'jikoshokai') ? '' : 'none';
+      return;
+    }
+  });
+
+  cards.forEach(card => {
+    const cat = card.dataset.category;
+    const search = card.dataset.search || '';
+    const matchFilter = activeFilter === 'all' || activeFilter === cat;
+    const matchSearch = !q || search.includes(q);
+    const show = matchFilter && matchSearch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+
+  // show/hide sections based on visible cards
+  ['mensetsu','school','embassy','pm','kaigo'].forEach(cat => {
+    const sec = document.querySelector(`[data-section="${cat}"]`);
+    if (!sec) return;
+    const hasVisible = sec.querySelector('.q-card:not([style*="display: none"])');
+    sec.style.display = hasVisible ? '' : 'none';
+  });
+}
+
+// INIT
+renderCards('grid-mensetsu', data.mensetsu, 'mensetsu');
+renderCards('grid-school', data.school, 'school');
+renderCards('grid-embassy', data.embassy, 'embassy');
+renderCards('grid-pm', data.pm, 'pm');
+renderCards('grid-kaigo', data.kaigo, 'kaigo');
+document.getElementById('totalQ').textContent = totalCards + '+';
+</script>
+</body>
+</html>
