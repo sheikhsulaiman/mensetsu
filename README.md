@@ -12,7 +12,7 @@
 
 ## ✨ Live Demo
 
-Simply open `mensetsu-prep.html` in any modern browser — no server, no build step required.
+Simply open `index.html` in any modern browser — no server, no build step required.
 
 ---
 
@@ -32,56 +32,64 @@ Every question and answer is presented in **three languages simultaneously** so 
 
 ## 🗂️ Content Sections
 
-| Section | Icon | Questions | Description |
-|---|---|---|---|
-| 自己紹介 Jikoshokai | 🪷 | Template | Full self-introduction script with line-by-line translation |
-| General Mensetsu | 💬 | 30 | Questions asked in all types of interviews |
-| Language School | 🏫 | 20 | Specific to Japanese language school admissions |
-| Embassy Interview | 🏛️ | 20 | Visa interview questions & return-plan answers |
-| Food Processing | 🍱 | 25 | Specialized for 飲食料品製造 (inshokuryouhin seizou) |
-| Elderly Care | 🏥 | 15 | Specialized for 介護 (kaigo) positions |
+| Section             | Icon | Questions | Description                                                 |
+| ------------------- | ---- | --------- | ----------------------------------------------------------- |
+| 自己紹介 Jikoshokai | 🪷   | Template  | Full self-introduction script with line-by-line translation |
+| General Mensetsu    | 💬   | 30        | Questions asked in all types of interviews                  |
+| Language School     | 🏫   | 20        | Specific to Japanese language school admissions             |
+| Embassy Interview   | 🏛️   | 20        | Visa interview questions & return-plan answers              |
+| Food Processing     | 🍱   | 25        | Specialized for 飲食料品製造 (inshokuryouhin seizou)        |
+| Elderly Care        | 🏥   | 15        | Specialized for 介護 (kaigo) positions                      |
 
 ---
 
 ## 🚀 Features
 
 ### 🔍 Live Search
+
 Filter questions in real time by typing in **Bengali, Japanese, or Romaji**.
 
 ### 🏷️ Category Filter
+
 One-click tabs to jump between interview categories — General, Language School, Embassy, Food Processing, Elderly Care.
 
 ### 🌐 Three-Language Display
+
 Every question and answer shows:
+
 - **日本語** — Native Japanese (Noto Serif JP)
 - **Romaji** — Romanized pronunciation guide
 - **বাংলা** — Bengali translation
 
 ### 📊 Progress Tracker
+
 A visual progress bar tracks how many questions you've reviewed. Reset anytime to restart your session.
 
 ### 📋 Copy Answers
+
 One-click button to copy any answer (all three languages) to clipboard — paste into flashcard apps, notes, or messaging.
 
 ### 🪷 Jikoshokai Template
+
 A fill-in-the-blank self-introduction script with every line translated. Includes `[おじぎ]` bowing cue markers.
 
 ### 📱 Responsive Design
+
 Works on desktop, tablet, and mobile.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | Usage |
-|---|---|
-| HTML5 | Structure |
-| CSS3 | Styling, animations, CSS variables |
-| Vanilla JavaScript | Search, filtering, accordion, clipboard |
-| [Noto Serif JP](https://fonts.google.com/noto/specimen/Noto+Serif+JP) | Japanese typography |
-| [Noto Sans Bengali](https://fonts.google.com/noto/specimen/Noto+Sans+Bengali) | Bengali typography |
-| [Syne](https://fonts.google.com/specimen/Syne) | UI headings |
-| [DM Mono](https://fonts.google.com/specimen/DM+Mono) | Romaji & code labels |
+| Technology                                                                    | Usage                                   |
+| ----------------------------------------------------------------------------- | --------------------------------------- |
+| HTML5                                                                         | Structure                               |
+| CSS3                                                                          | Styling, animations, CSS variables      |
+| Vanilla JavaScript                                                            | Search, filtering, accordion, clipboard |
+| [Noto Serif JP](https://fonts.google.com/noto/specimen/Noto+Serif+JP)         | Japanese typography                     |
+| [Noto Sans Bengali](https://fonts.google.com/noto/specimen/Noto+Sans+Bengali) | Bengali typography                      |
+| [Syne](https://fonts.google.com/specimen/Syne)                                | UI headings                             |
+| [DM Mono](https://fonts.google.com/specimen/DM+Mono)                          | Romaji & code labels                    |
 
 > **Zero npm. Zero build tools. Zero dependencies.** Just one `.html` file and Google Fonts CDN.
 
@@ -90,21 +98,24 @@ Works on desktop, tablet, and mobile.
 ## 📦 Getting Started
 
 ### Option 1 — Direct Open
+
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/mensetsu-prep.git
+git clone https://github.com/sheikhsulaiman/mensetsu.git
 
 # Open in browser
-open mensetsu-prep.html
+open index.html
 ```
 
 ### Option 2 — GitHub Pages
+
 1. Fork this repository
 2. Go to **Settings → Pages**
 3. Set source to `main` branch, `/ (root)`
-4. Your site will be live at `https://your-username.github.io/mensetsu-prep`
+4. Your site will be live at `https://sheikhsulaiman.github.io/mensetsu`
 
 ### Option 3 — Local Server (optional)
+
 ```bash
 # Python
 python -m http.server 8000
@@ -127,23 +138,27 @@ npx serve .
 ## 📝 Sample Questions Covered
 
 **General Interview**
+
 > あなたの長所と短所を教えてください。  
-> *Anata no chousho to tansho o oshiete kudasai.*  
+> _Anata no chousho to tansho o oshiete kudasai._  
 > আপনার গুণ ও দোষ বলুন।
 
 **Language School**
+
 > JLPT N4に合格したことについて教えてください。  
-> *JLPT N4 ni goukaku shita koto ni tsuite oshiete kudasai.*  
+> _JLPT N4 ni goukaku shita koto ni tsuite oshiete kudasai._  
 > JLPT N4 পরীক্ষায় উত্তীর্ণ হওয়া সম্পর্কে বলুন।
 
 **Embassy**
+
 > 帰国する意思は確かですか。  
-> *Kikoku suru ishi wa tashika desu ka?*  
+> _Kikoku suru ishi wa tashika desu ka?_  
 > দেশে ফেরার ইচ্ছা নিশ্চিত?
 
 **Food Processing**
+
 > 飲食料品製造で一番大切なことは何ですか。  
-> *Inshokuryouhin seizou de ichiban taisetsu na koto wa nan desu ka?*  
+> _Inshokuryouhin seizou de ichiban taisetsu na koto wa nan desu ka?_  
 > খাদ্য প্রক্রিয়াকরণে সবচেয়ে গুরুত্বপূর্ণ কী?
 
 ---
@@ -195,7 +210,7 @@ MIT License — free to use, modify, and share.
 <div align="center">
 
 **面接頑張ってください！**  
-*Mensetsu ganbatte kudasai!*  
+_Mensetsu ganbatte kudasai!_  
 সাক্ষাৎকারে শুভকামনা! 🌸
 
 </div>
