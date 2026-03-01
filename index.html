@@ -325,6 +325,55 @@
         color: white;
       }
 
+      /* FILTER SELECT (MOBILE ONLY) */
+      .filter-select {
+        display: none;
+        width: 100%;
+        padding: 10px 36px 10px 16px;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        font-family: "Syne", "Noto Sans Bengali", sans-serif;
+        font-size: 0.9rem;
+        background: white;
+        color: var(--ink);
+        font-weight: 600;
+        outline: none;
+        cursor: pointer;
+        transition: border-color 0.2s;
+      }
+
+      .filter-select:focus {
+        border-color: var(--red);
+      }
+
+      /* SEARCH TOGGLE BUTTON (MOBILE ONLY) */
+      .search-toggle {
+        display: none;
+        padding: 10px 16px;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        background: white;
+        color: var(--ink);
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        min-width: 48px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search-toggle:hover {
+        border-color: var(--red);
+        background: var(--red);
+        color: white;
+      }
+
+      .search-toggle.active {
+        background: var(--red);
+        border-color: var(--red);
+        color: white;
+      }
+
       /* MAIN LAYOUT */
       .main {
         max-width: 1200px;
@@ -807,6 +856,52 @@
       }
 
       @media (max-width: 640px) {
+        /* Reduce overall padding on mobile */
+        .header-inner {
+          padding: 10px 16px;
+        }
+
+        .hero {
+          padding: 40px 16px 50px;
+        }
+
+        .controls-section {
+          padding: 12px 16px;
+          top: 57px; /* Adjust for reduced header height on mobile */
+        }
+
+        .main {
+          padding: 24px 16px 40px;
+        }
+
+        .section {
+          margin-bottom: 40px;
+        }
+
+        .section-header {
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+        }
+
+        .q-header {
+          padding: 14px 16px;
+        }
+
+        .q-answer-inner {
+          padding: 16px;
+        }
+
+        .template-line {
+          padding: 10px;
+          gap: 10px;
+        }
+
+        .progress-bar-section {
+          padding: 20px 16px;
+          margin-bottom: 28px;
+          gap: 16px;
+        }
+
         .template-line {
           grid-template-columns: 1fr;
         }
@@ -815,6 +910,53 @@
         }
         .hero-stats {
           gap: 20px;
+        }
+
+        /* Hide JLPT badge on mobile */
+        .header-badge {
+          display: none;
+        }
+
+        /* Show select dropdown on mobile, hide filter tabs */
+        .filter-tabs {
+          display: none;
+        }
+
+        .filter-select {
+          display: block;
+        }
+
+        /* Keep search and filter on same line on mobile */
+        .controls-inner {
+          gap: 8px;
+        }
+
+        /* Show search toggle button, hide search box by default */
+        .search-toggle {
+          display: flex;
+          flex: 0 0 auto;
+        }
+
+        .search-box {
+          display: none;
+          flex: 1;
+          min-width: 150px;
+        }
+
+        /* Show search box when active */
+        .controls-inner.search-active .search-box {
+          display: block;
+        }
+
+        /* Hide filter when search is active to save space */
+        .controls-inner.search-active .filter-select {
+          display: none;
+        }
+
+        .filter-select {
+          flex: 1;
+          width: auto;
+          min-width: 120px;
         }
       }
     </style>
@@ -856,7 +998,14 @@
     </section>
 
     <div class="controls-section">
-      <div class="controls-inner">
+      <div class="controls-inner" id="controlsInner">
+        <button
+          class="search-toggle"
+          id="searchToggle"
+          aria-label="Toggle search"
+        >
+          🔍
+        </button>
         <div class="search-box">
           <span class="search-icon">🔍</span>
           <input
@@ -880,6 +1029,15 @@
           </button>
           <button class="filter-tab" data-filter="kaigo">介護</button>
         </div>
+        <select class="filter-select" id="filterSelect">
+          <option value="all">সব বিভাগ দেখুন</option>
+          <option value="jikoshokai">自己紹介 (জিকোশোকাই)</option>
+          <option value="mensetsu">面接 (সাধারণ সাক্ষাৎকার)</option>
+          <option value="school">ভাষা বিদ্যালয়</option>
+          <option value="embassy">দূতাবাস</option>
+          <option value="pm">খাদ্য প্রক্রিয়াকরণ</option>
+          <option value="kaigo">介護 (বৃদ্ধ পরিচর্যা)</option>
+        </select>
       </div>
     </div>
 
@@ -2562,16 +2720,46 @@
       // SEARCH & FILTER
       const searchInput = document.getElementById("searchInput");
       const filterTabs = document.querySelectorAll(".filter-tab");
+      const filterSelect = document.getElementById("filterSelect");
+      const searchToggle = document.getElementById("searchToggle");
+      const controlsInner = document.getElementById("controlsInner");
       let activeFilter = "all";
 
+      // Toggle search on mobile
+      searchToggle.addEventListener("click", () => {
+        controlsInner.classList.toggle("search-active");
+        searchToggle.classList.toggle("active");
+        if (controlsInner.classList.contains("search-active")) {
+          searchInput.focus();
+        } else {
+          searchInput.value = "";
+          filterAll();
+        }
+      });
+
       searchInput.addEventListener("input", filterAll);
+
       filterTabs.forEach((tab) => {
         tab.addEventListener("click", () => {
           filterTabs.forEach((t) => t.classList.remove("active"));
           tab.classList.add("active");
           activeFilter = tab.dataset.filter;
+          filterSelect.value = activeFilter; // sync select dropdown
           filterAll();
         });
+      });
+
+      filterSelect.addEventListener("change", () => {
+        activeFilter = filterSelect.value;
+        // sync tab buttons
+        filterTabs.forEach((t) => {
+          if (t.dataset.filter === activeFilter) {
+            t.classList.add("active");
+          } else {
+            t.classList.remove("active");
+          }
+        });
+        filterAll();
       });
 
       function filterAll() {
