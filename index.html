@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f0e0b" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -329,7 +330,7 @@
       .filter-select {
         display: none;
         width: 100%;
-        padding: 10px 36px 10px 16px;
+        padding: 10px 16px;
         border: 2px solid var(--border);
         border-radius: 8px;
         font-family: "Syne", "Noto Sans Bengali", sans-serif;
@@ -2809,6 +2810,23 @@
       renderCards("grid-pm", data.pm, "pm");
       renderCards("grid-kaigo", data.kaigo, "kaigo");
       document.getElementById("totalQ").textContent = totalCards + "+";
+
+      // Register Service Worker for offline support
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered successfully:",
+                registration.scope,
+              );
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed:", error);
+            });
+        });
+      }
     </script>
   </body>
 </html>
