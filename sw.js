@@ -1,15 +1,15 @@
 // Service Worker for Mensetsu Prep
-const CACHE_NAME = "mensetsu-prep-v1";
+const CACHE_NAME = "mensetsu-prep-v2";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/favicon.ico",
-  "/favicon-16x16.png",
-  "/favicon-32x32.png",
-  "/apple-touch-icon.png",
-  "/android-chrome-192x192.png",
-  "/android-chrome-512x512.png",
-  "/site.webmanifest",
+  "./",
+  "./index.html",
+  "./favicon.ico",
+  "./favicon-16x16.png",
+  "./favicon-32x32.png",
+  "./apple-touch-icon.png",
+  "./android-chrome-192x192.png",
+  "./android-chrome-512x512.png",
+  "./site.webmanifest",
 ];
 
 // Install event - cache resources
